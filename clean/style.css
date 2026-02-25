@@ -59,3 +59,31 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.gallery figure {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.gallery figcaption {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
