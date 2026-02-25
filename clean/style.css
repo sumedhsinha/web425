@@ -2,45 +2,80 @@
 /* Sumedh Sinha (sumedh.sinha@rutgers.edu) */
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.8;
     margin: 0;
-    padding: 20px;
-    background-color: #e0e0e0;
+    padding: 0;
+    background-color: #f4f4f4;
     color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    margin: 5px 0;
 }
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 20px;
     margin: 20px auto;
-    border: 1px solid #ccc;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Flexbox for navigation */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #001f3f; /* Navy blue */
     color: #fff;
     padding: 10px 20px;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
+    border-bottom: 3px solid #ccc;
+}
+
+.site-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.site-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.site-nav a:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+.site-nav a:first-child {
+    padding-left: 20px;
 }
 
 .site-logo {
     height: 60px;
     width: auto;
-    display: block;
-    margin: 0 auto;
+    margin-right: 15px;
 }
 
 .site-nav a {
@@ -55,7 +90,7 @@ body {
 
 footer {
     text-align: center;
-    background-color: #333;
+    background-color: #001f3f; /* Navy blue */
     color: #fff;
     padding: 10px 0;
     position: relative;
