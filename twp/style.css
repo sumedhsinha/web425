@@ -1,18 +1,19 @@
 /* CSS Styles for the clean site */
 /* Sumedh Sinha (sumedh.sinha@rutgers.edu) */
 
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.8;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f3f6f2;
+    color: #2f3a2f; 
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Georgia', serif;
-    color: #222;
+    color: #1f2a1f;
     margin-bottom: 10px;
 }
 
@@ -34,41 +35,45 @@ li {
     max-width: 1200px;
     padding: 20px;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
 }
 
-/* Flexbox for navigation */
 .site-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    background-color: #001f3f; /* Navy blue */
+    justify-content: space-between; 
+    align-items: center;          
+    background-color: #2f4f3a;      
     color: #fff;
-    padding: 15px 20px; /* Reduced padding */
-    border-bottom: 3px solid #ccc;
-    height: 80px; /* Reduced height */
+    padding: 0 30px;              
+    border-bottom: 3px solid #9dbb9d; 
+    height: 120px;                 
+    position: relative;
+}
+
+.site-header > a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
 }
 
 .site-logo {
-    height: 60px; /* Reduced logo size */
-    width: auto;
+    height: 100px;                  
+    width: auto;                   
+    display: block;
     margin: 0;
-    position: absolute;
-    top: 10px;
-    left: 10px;
 }
 
 .site-nav {
-    margin-left: auto;
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    margin-left: auto;
 }
 
 .site-nav a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 4px;
@@ -76,43 +81,24 @@ li {
 }
 
 .site-nav a:hover {
-    background-color: #666;
+    background-color: #4f6f54;     
     color: #fff;
-}
-
-.site-nav a:first-child {
-    padding-left: 20px;
-}
-
-/* Position logo on the top left of the pages */
-.site-logo {
-    height: 60px;
-    width: auto;
-    display: block;
-    margin: 0;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.site-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-.site-nav a:hover {
     text-decoration: underline;
 }
 
 footer {
     text-align: center;
-    background-color: #001f3f; /* Navy blue */
-    color: #fff;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
+    background-color: #11110f; 
+    color: #ffffff;
+    padding: 40px 0;
     width: 100%;
+}
+
+.footer-tagline {
+    height: 120px;
+    width: auto;
+    display: block;
+    margin: 0 auto 10px auto;
 }
 
 .gallery {
@@ -123,12 +109,12 @@ footer {
 }
 
 .gallery figure {
-    border: 1px solid #ccc;
+    border: 1px solid #d6e2d6;
     padding: 10px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #f6faf6; 
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .gallery img {
@@ -140,7 +126,7 @@ footer {
 .gallery figcaption {
     margin-top: 8px;
     font-size: 0.9em;
-    color: #555;
+    color: #4a5a4a;
 }
 
 img {
@@ -149,17 +135,6 @@ img {
     display: block;
     margin: 0 auto;
 }
-
-/* for the ftr img tag */
-.footer-tagline {
-    max-width: 90%;
-    height: auto;
-    display: block;
-    margin: 0 auto 10px auto;
-}
-
-
-/* for landing page adding some styles */
 
 .landing {
     text-align: center;
@@ -193,7 +168,7 @@ img {
 }
 
 .landing-links a {
-    background-color: #001f3f;
+    background-color: #3f6b47; 
     color: white;
     padding: 12px 18px;
     border-radius: 6px;
@@ -202,5 +177,5 @@ img {
 }
 
 .landing-links a:hover {
-    background-color: #666;
+    background-color: #5d8a62; 
 }
