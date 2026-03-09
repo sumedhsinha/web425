@@ -150,6 +150,14 @@ img {
     margin: 0 auto;
 }
 
+/* for the ftr img tag */
+.footer-tagline {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
 
 /* for landing page adding some styles */
 
