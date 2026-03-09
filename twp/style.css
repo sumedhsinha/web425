@@ -109,6 +109,8 @@ footer {
 }
 
 .gallery figure {
+    display: flex;
+    flex-direction: column; 
     border: 1px solid #d6e2d6;
     padding: 10px;
     text-align: center;
@@ -117,10 +119,18 @@ footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
-.gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
+.gallery figcaption {
+    order: -1; 
+    margin-bottom: 8px;
+    font-weight: bold; 
+    font-size: 1rem;
+    color: #1f2a1f;
+}
+
+.gallery .extra-data {
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: #4a5a4a;
 }
 
 .gallery figcaption {
