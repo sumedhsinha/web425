@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.8;
+    line-height: 1.7; /* slightly tighter but still readable */
     margin: 0;
     padding: 0;
     background-color: #f3f6f2;
@@ -15,6 +15,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Georgia', serif;
     color: #1f2a1f;
     margin-bottom: 10px;
+    line-height: 1.3; /* prevents tall heading spacing */
+}
+
+p {
+    margin: 10px 0;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
 .subtitle {
@@ -23,11 +30,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     color: #4a5a4a;
     margin-top: 6px;
-}
-
-p {
-    margin: 10px 0;
-    font-size: 1rem;
 }
 
 ul {
@@ -112,8 +114,9 @@ footer {
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 20px 0;
+    gap: 16px;
+    max-width: 900px;     
+    margin: 25px auto;    
 }
 
 .gallery figure {
@@ -138,14 +141,10 @@ footer {
 .gallery .extra-data {
     margin-top: 8px;
     font-size: 0.85em;
+    line-height: 1.4;
     color: #4a5a4a;
 }
 
-.gallery figcaption {
-    margin-top: 8px;
-    font-size: 0.9em;
-    color: #4a5a4a;
-}
 
 img {
     max-width: 100%;
