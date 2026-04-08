@@ -213,6 +213,45 @@ footer {
     width: 100%;
 }
 
+.works-cited {
+    grid-column: 1 / -1;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+.works-cited h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: #2563eb; 
+    border-bottom: 2px solid #f3f6f2;
+    padding-bottom: 10px;
+}
+
+.citation {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    text-indent: -40px; 
+    word-break: break-word; 
+}
+
+.citation a {
+    color: #3f6b47; 
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: all 0.2s ease;
+}
+
+.citation a:hover {
+    color: #1f2a1f;
+    background-color: #d6e2d6;
+    text-decoration: none;
+}
+
 /* Responsive Design? */
 @media (max-width: 1024px) {
     .review-container {
