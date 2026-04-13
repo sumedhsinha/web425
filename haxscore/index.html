@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
     <title>Hackathon Reviews | Home</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -11,7 +12,10 @@
 
     <header>
         <nav>
-            <a href="index.html" class="site-logo">HackReviews</a>
+            <!-- <a href="index.html" class="site-logo">HackReviews</a> -->
+            
+            <a href="index.html" class="site-logo"><img src="logos/haxscore_logo.svg" alt="Haxscore Site Logo" class="logo-img"></a>
+
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
@@ -22,14 +26,33 @@
     </header>
 
     <main>
-        <h1>Global Hackathon Map</h1>
-        <p>Explore hackathons I've reviewed around the world. Click a pin to read a quick preview!</p>
+        <h1>Maps of Reviews</h1>
+        <p>Explore hackathons I've visited. Click a pin to read a quick preview, and read more in the in-depth review!</p>
+        <p>Important Note: This map will not work correctly within a local environment (when viewed from Finder or Files)</p>
         
         <div id="map"></div>
     </main>
 
+    <!-- <footer>
+        <p>&copy; 2026 Sumedh Sinha. All rights reserved.</p>
+    </footer> -->
+
     <footer>
-        <p>&copy; 2026 Hackathon Reviews. All rights reserved.</p>
+            <!-- <img src="logos/tag.png" alt="Reduce Waste Secure the Planet footer tagline" class="footer-tagline"> -->
+
+            <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+            </div>
+
+            <p>Created by Sumedh Sinha | Web 425 | sumedh.sinha@rutgers.edu | &copy; 2026 Sumedh Sinha. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
