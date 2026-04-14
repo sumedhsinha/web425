@@ -411,6 +411,59 @@ figcaption {
     margin-right: 2px;
 }
 
+.toc-card {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem 2rem;
+}
+
+.toc-card h3 {
+    margin-top: 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.toc-list {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.toc-list li {
+    margin-bottom: 0.5rem;
+}
+
+.toc-list li:last-child {
+    margin-bottom: 0;
+}
+
+.toc-list a {
+    display: flex; 
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.4rem 0; 
+    transition: all 0.2s ease;
+}
+
+.toc-list a i {
+    color: var(--accent-color);
+    margin-right: 12px;
+    width: 24px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.toc-list a:hover {
+    color: var(--accent-color);
+    text-decoration: none; 
+    transform: translateX(6px);
+}
+
+.toc-list a:hover i {
+    transform: scale(1.15); 
+}
+
 /* ==========================================================================
    7. Footer
    ========================================================================== */
