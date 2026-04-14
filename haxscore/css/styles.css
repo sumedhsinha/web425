@@ -1,6 +1,4 @@
-/* ==========================================================================
-   CSS Variables (Light & Dark Mode)
-   ========================================================================== */
+/* Light & Dark Mode */
 :root {
     --bg-color: #f4f7f6;
     --text-color: #222222;
@@ -8,12 +6,14 @@
     --card-bg: #ffffff;
     --accent-color: #0056b3;
     --accent-hover: #003d82;
-    --nav-bg: #111111;
-    --nav-text: #ffffff;
+    --nav-bg: #ffffff;       /* White header in light mode */
+    --nav-text: #222222;     /* Dark text in light mode */
     --border-color: #dddddd;
-    --footer-bg: #222222;
+    --footer-bg: #ffffff;    /* same as header */
+    --footer-text: #222222;
 }
 
+/* system preference for now, will add a toggle */
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #121212;
@@ -22,15 +22,15 @@
         --card-bg: #1e1e1e;
         --accent-color: #4da3ff;
         --accent-hover: #80c1ff;
-        --nav-bg: #000000;
+        --nav-bg: #000000;       /* Black header in dark mode */
+        --nav-text: #ffffff;     /* White text in dark mode */
         --border-color: #333333;
-        --footer-bg: #0a0a0a;
+        --footer-bg: #000000;    
+        --footer-text: #ffffff;
     }
 }
 
-/* ==========================================================================
-   Reset & Base Typography
-   ========================================================================== */
+/* Reset & Base Typography */
 * {
     margin: 0;
     padding: 0;
@@ -65,15 +65,14 @@ a { color: var(--accent-color); text-decoration: none; transition: color 0.2s; }
 a:hover { color: var(--accent-hover); text-decoration: underline; }
 cite { font-style: italic; color: var(--text-muted); font-size: 0.9em; }
 
-/* ==========================================================================
-   Navigation Bar
-   ========================================================================== */
+/* Navigation Bar */
 header {
     background-color: var(--nav-bg);
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000; /* Stays above map */
+    border-bottom: 1px solid var(--border-color); /* Added a border to separate white header from white background */
 }
 
 nav {
@@ -85,18 +84,27 @@ nav {
 }
 
 .site-logo {
+    display: flex;
+    align-items: center; 
+    text-decoration: none;
     color: var(--nav-text);
     font-size: 1.5rem;
     font-weight: bold;
-    text-decoration: none;
 }
 
 .site-logo:hover { color: var(--nav-text); text-decoration: none; }
+
+.logo-img {
+    height: 120px; 
+    width: 120px; 
+    display: block;
+}
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 1.5rem;
+    align-items: center; 
 }
 
 .nav-links a {
@@ -106,21 +114,7 @@ nav {
 
 .nav-links a:hover { color: var(--accent-color); text-decoration: none; }
 
-.site-logo {
-    display: flex;
-    align-items: center; 
-    text-decoration: none;
-}
-
-.logo-img {
-    height: 100px; 
-    width: 100px; 
-    display: block;
-}
-
-/* ==========================================================================
-   Map Container (Index Page)
-   ========================================================================== */
+/* Map Container (Index Page) */
 #map {
     height: 600px;
     width: 100%;
@@ -130,9 +124,7 @@ nav {
     z-index: 1; /* Keep below nav */
 }
 
-/* ==========================================================================
-   Cards (Grid Layouts)
-   ========================================================================== */
+/* Cards (Grid Layouts) */
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -162,9 +154,9 @@ nav {
 .long-card .card-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; display: block; }
 .long-card .read-more { font-weight: bold; }
 
-/* ==========================================================================
-   Image Gallery & Albums
-   ========================================================================== */
+
+
+/* Image Gallery & Albums */
 .album-category { margin-bottom: 3rem; }
 .gallery-grid {
     display: grid;
@@ -194,13 +186,10 @@ figcaption {
     font-style: italic;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
-
+/* Footer */
 footer {
     background-color: var(--footer-bg);
-    color: var(--nav-text);
+    color: var(--nav-text); /* Pulling from variables so text stays visible */
     text-align: center;
     padding: 1.5rem;
     margin-top: auto;
@@ -219,7 +208,6 @@ footer {
     font-size: 28px;       
     transition: transform 0.2s ease, color 0.2s ease;
 }
-
 
 .social-icons a:hover {
     transform: translateY(-3px); 

@@ -1,55 +1,99 @@
+// Removed the require('react') line
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Only run map logic if the map element exists (i.e., on index.html)
+
     const mapElement = document.getElementById('map');
     
     if (mapElement) {
-        // Initialize map centered roughly on North America/Europe
-        const map = L.map('map').setView([39.8283, -98.5795], 3);
+        // Initialize map centered on the NY/NJ/PA region
+        const map = L.map('map').setView([40.7, -74.5], 7);
 
         // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
-        // Array of Hackathon locations (Mock data - replace with your own)
+        // Array of Hackathon locations
         const hackathons = [
             {
-                name: "SF Hacks 2025",
-                lat: 37.7749,
-                lng: -122.4194,
-                summary: "An incredible 48-hour event focused on AI and accessibility.",
-                link: "reviews/sf-hacks-2025.html"
+                name: "HackRU - Spring 2023",
+                lat: 40.5032860,
+                lng: -74.4520966,
+                org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
+                location: "College Ave Student Center, New Brunswick, NJ",
+                summary: "My first ever hackathon during my freshman year. Exciting experience! <cite>Reviewed Feb 2023</cite>",
+                link: "reviews/hackru-2023.html"
             },
             {
-                name: "London FinTech Hack",
-                lat: 51.5074,
-                lng: -0.1278,
-                summary: "Great venue, though the judging criteria was a bit vague. <cite>Reviewed on Oct 2025</cite>",
-                link: "reviews/london-fintech.html"
+                name: "HackRU - Spring 2024",
+                lat: 40.5235051,
+                lng: -74.4581316,
+                org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
+                location: "Busch Student Center, Piscataway, NJ",
+                summary: "Good venue, though the judging criteria was a bit vague. <cite>Reviewed Feb 2024</cite>",
+                link: "reviews/hackru-2024.html"
             },
             {
-                name: "Toronto HackTheNorth",
-                lat: 43.6510,
-                lng: -79.3470,
-                summary: "Massive scale, excellent food, highly competitive environment.",
-                link: "reviews/hack-the-north.html"
+                name: "HealthHack - 2024",
+                lat: 40.49592587902012,
+                lng: -74.44977158729839,
+                org: "Rutgers Health",
+                location: "RWJ University Hospital, New Brunswick, NJ",
+                summary: "Focused on healthcare innovation, with great industry mentors. Won $750! <cite>Reviewed Dec 2024</cite>",
+                link: "reviews/healthhack-2024.html"
+            },
+            {
+                name: "NexHacks - 2026 (Inaugural Edition)",
+                lat: 40.44402161381973,
+                lng: -79.94219197908494,
+                org: "NexHacks x Carnegie Mellon University",
+                location: "Jared L Cohon Hall, Pittsburgh, PA",
+                summary: "The inaugural edition of NexHacks at CMU. Exciting to see how this new hackathon evolves! <cite>Reviewed Jan 2026</cite>",
+                link: "reviews/nexhacks-2026.html"
+            },
+            {
+                name: "UHACCS - Spring 2026",
+                lat: 40.52363092133433,
+                lng: -74.43711106075385,
+                org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
+                location: "Livingston Student Center, Piscataway, NJ",
+                summary: "Small event but learnt a lot. <cite>Reviewed Feb 2026</cite>",
+                link: "reviews/uhaccs-2026.html"
+            },
+            {
+                name: "YHack - 2026",
+                lat: 41.31715734356258, 
+                lng: -72.92229596365036,
+                org: "Yale University",
+                location: "OC Marsh Hall, New Haven, CT",
+                summary: "Secured a DOUBLE WIN, 2 awards totalling more than $2,000!! <cite>Reviewed Mar 2026</cite>",
+                link: "reviews/yhack-2026.html"
             }
         ];
 
         // Add pins to map
         hackathons.forEach(hack => {
-            // HTML for the "Short Preview Card" inside the popup
-            const popupContent = `
-                <div class="short-card">
-                    <h4>${hack.name}</h4>
-                    <p>${hack.summary}</p>
-                    <a href="${hack.link}">Read Full Review &rarr;</a>
-                </div>
-            `;
+            
+            // Only attempt to add a marker if we have valid coordinates
+            if (hack.lat !== undefined && hack.lng !== undefined) {
+                
+                // Short Preview Card inside the popup
+                const popupContent = `
+                    <div class="short-card">
+                        <h4>${hack.name}</h4>
+                        <p class="location-text">${hack.location}</p>
+                        <p class="org">${hack.org}</p>
+                        <p>${hack.summary}</p>
+                        <a href="${hack.link}">Read the Full Review &rarr;</a>
+                    </div>
+                `;
 
-            L.marker([hack.lat, hack.lng])
-                .addTo(map)
-                .bindPopup(popupContent);
+                L.marker([hack.lat, hack.lng])
+                    .addTo(map)
+                    .bindPopup(popupContent);
+            } else {
+                console.warn(`Skipping map marker for ${hack.name} due to missing coordinates.`);
+            }
         });
     }
 });
