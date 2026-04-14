@@ -113,6 +113,10 @@ nav {
     height: 100px; 
     width: 100px; 
     display: block;
+    /* Scale the image up visually (1.2 = 120% size, 1.5 = 150% size) */
+    transform: scale(1.2); 
+    /* Forces it to scale outward to the right, so it doesn't clip off the left edge of the screen */
+    transform-origin: left center;
 }
 
 
