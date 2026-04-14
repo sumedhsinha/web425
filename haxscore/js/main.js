@@ -2,6 +2,22 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // for scroll behavioiur vis a vis review header - broken
+    // const reviewHeader = document.querySelector('.review-header');
+    // const mainNav = document.querySelector('header'); // The main global nav
+
+    // // Only run this script if we are actually on a page that has a review header
+    // if (reviewHeader && mainNav) {
+    //     window.addEventListener('scroll', () => {
+    //         // If the user scrolls down past the height of the main navigation bar...
+    //         if (window.scrollY > mainNav.offsetHeight) {
+    //             reviewHeader.classList.add('is-scrolled'); // Turn on compact mode
+    //         } else {
+    //             reviewHeader.classList.remove('is-scrolled'); // Revert to large mode
+    //         }
+    //     });
+    // }
+
     // Theme
     const themeToggleBtn = document.getElementById('theme-toggle');
     
