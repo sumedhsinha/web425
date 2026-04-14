@@ -385,8 +385,8 @@ figcaption {
 .hero-img-container img {
     width: 100%;
     height: auto;
-    max-height: 500px;
-    object-fit: cover;
+    /* max-height: 500px;
+    object-fit: cover; */
     border-radius: 8px;
     border: 1px solid var(--border-color);
 }
@@ -403,6 +403,12 @@ figcaption {
     margin-bottom: 1rem;
     word-wrap: break-word;
     font-size: 0.95rem;
+}
+
+/* Font Awesome Star Ratings */
+.star-icon {
+    color: #f5c518; 
+    margin-right: 2px;
 }
 
 /* ==========================================================================
