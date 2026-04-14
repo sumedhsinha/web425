@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
+    <title>Gear Review Methodology | HaxScore</title>
+    <link rel="stylesheet" href="../css/styles.css"> 
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="../index.html" class="site-logo"> 
+                <img src="../logos/hax_light.svg" alt="Haxscore Site Logo" class="logo-img light-logo"> 
+                <img src="../logos/hax_dark.svg" alt="Haxscore Site Logo" class="logo-img dark-logo"> 
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li> 
+                <li><a href="../src/review-hub.html">Reviews</a></li> 
+                <li><a href="../how/we-rate.html">Our Ways & Methods</a></li>
+                <li><a href="../src/inventory.html">Inventory</a></li>
+                <li><a href="../src/sketch-hub.html">Sketches</a></li>
+                <li><a href="../src/about.html">About</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="methodology-container">
+            <header class="review-header">
+                <a href="../how/we-rate.html" style="font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem; display: inline-block;">&larr; Back to Overview</a>
+                <h1>Gear Review Methodology</h1>
+                <h2>How We Test Tech</h2>
+            </header>
+
+            <section id="#v1.0" style="margin-top: 2rem;">
+                
+                <div style="display: inline-flex; align-items: center; background-color: var(--nav-btn-hover-bg); color: var(--accent-color); padding: 0.3rem 0.8rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; margin-bottom: 1.5rem; border: 1px solid var(--accent-color);">
+                    <i class="fa-solid fa-code-commit" style="margin-right: 6px;"></i> Version 1.0 (Current)
+                </div>
+
+                <p>Hackathons are uniquely demanding environments. A laptop that is "good enough" for a coffee shop might thermal-throttle when compiling a massive machine learning model at 3:00 AM. A pair of headphones might sound great, but if they squeeze your head after 4 hours, they are useless on the hackathon floor.</p>
+
+                <p>Because of this, we don't just run synthetic benchmarks. We evaluate gear based on how it survives the grueling demands of a competitive coding environment.</p>
+
+                <h3>1. The Acquisition Process</h3>
+                <p>HaxScore purchases the majority of our review gear at retail prices. This ensures we are getting the exact same unboxing experience, quality control, and customer service as you would. In the rare event a manufacturer provides a pre-release review unit, it will be explicitly disclosed, and the manufacturer has zero input or advanced viewing rights regarding the final review.</p>
+
+                <h3>2. Core Testing Categories</h3>
+                <p>Every piece of hardware is evaluated across four distinct categories before we assign an Overall Rating:</p>
+                
+                <ul class="methodology-list">
+                    <li><strong>Build Quality & Portability:</strong> Hackathon gear lives in backpacks. We look for rigid chassis designs, scratch resistance, and weights that won't destroy your shoulders during a train commute to the venue.</li>
+                    <li><strong>Performance & Thermal Throttling:</strong> We run standard benchmarks (Geekbench, Cinebench), but we also simulate real-world developer loads—like running multiple Docker containers while sharing a screen on Zoom—to see how hot and loud the machine gets under sustained pressure.</li>
+                    <li><strong>Battery Endurance:</strong> You cannot always guarantee access to an outlet at a crowded venue. We test battery life under realistic "screen-on, Wi-Fi connected, IDE open" conditions, not the unrealistic video-playback loops manufacturers use.</li>
+                    <li><strong>Value Proposition:</strong> We look closely at RAM/Storage upgrade pricing and compare the device against similarly priced competitors to determine if you are actually getting what you pay for.</li>
+                </ul>
+
+                <h3>3. "The 12-Hour Rule"</h3>
+                <p>For peripherals (headphones, mice, keyboards), comfort is paramount. A device cannot score higher than 3 stars if it causes physical fatigue, clamping pressure, or wrist strain after 12 continuous hours of use. Ergonomics are just as important as technical specifications.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <img src="../logos/line.png" alt="STRIVE FOR THE CHALLENGE tagline" class="footer-tagline">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p>Created by Sumedh Sinha | Web 425 | sumedh.sinha@rutgers.edu | &copy; 2026 Sumedh Sinha. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/main.js"></script> 
+</body>
+</html>

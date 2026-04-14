@@ -515,3 +515,57 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ==========================================================================
+   9. Methodology Pages (Single Column Layout)
+   ========================================================================== */
+.methodology-container {
+    max-width: 850px;
+    margin: 0 auto; /* Centers the container */
+    padding: 0 1rem;
+}
+
+.methodology-container p,
+.methodology-container li {
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.methodology-container h3 {
+    margin-top: 2.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Grid for the cards that link to specific methodology pages */
+.methodology-nav-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Specific styling for methodology lists to keep them clean */
+.methodology-list {
+    margin-left: 0;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.methodology-list li {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Custom bullet points using Font Awesome */
+.methodology-list li::before {
+    content: "\f058"; /* Font Awesome Check-Circle icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
