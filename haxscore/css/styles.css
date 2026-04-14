@@ -175,6 +175,7 @@ body.dark-mode .dark-logo {
 
 /* Round ONLY the outer corners of the first and last links */
 .nav-links li:first-child a {
+    
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
 }
@@ -334,4 +335,136 @@ footer {
     transform: translateY(-3px); 
     color: var(--accent-color);        
     fill: var(--accent-color);        
+}
+
+/* ==========================================================================
+   Individual Review Layout (Multi-column & Tiles)
+   ========================================================================== */
+.review-header {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+.review-header h1 {
+    margin-bottom: 0.25rem;
+    font-size: 2.8rem;
+}
+
+.review-meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Forces a permanent buffer zone so text never touches the left/right edges */
+.review-header,
+.review-main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+/* 
+Divides the page into ~66% left (main) and ~33% right (sidebar) 
+*/
+.review-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 2.5rem;
+    align-items: start; /* Prevents sidebar cards from stretching vertically to match main content */
+}
+
+/* Sidebar styling using existing .card class */
+.review-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Tweak card headers for the sidebar */
+.review-sidebar .card h3 {
+    font-size: 1.15rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Clean list styling for Pros/Cons and Links */
+.clean-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.clean-list li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+/* Hero Image Wrapper */
+.hero-img-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.hero-img-container img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.hero-caption {
+    text-align: center;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Works Cited Hanging Indent */
+.works-cited p {
+    padding-left: 2rem;
+    text-indent: -2rem;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    font-size: 0.95rem;
+}
+
+/* Responsive: Stacks the sidebar UNDER the main content on smaller screens */
+@media (max-width: 900px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 1. Unify the text size and line height inside the main review body */
+.review-main p, 
+.review-main li {
+    font-size: 1.125rem; /* Matches your global body font size */
+    line-height: 1.7;    /* Slightly taller line-height for easier reading of long blocks */
+}
+
+/* 2. Control the spacing around the H3 subheadings */
+.review-main h3 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;   /* Pushes the heading away from the previous section */
+    margin-bottom: 1rem;  /* Keeps it close to its own paragraph */
+    border-bottom: 1px solid var(--border-color); /* Adds a clean visual separator */
+    padding-bottom: 0.5rem;
+}
+
+/* 3. Fix the bulleted lists (Features & Performance Tests) */
+.review-main ul {
+    margin-left: 1.5rem;  /* Indents the bullets properly */
+    margin-bottom: 1.5rem; /* Matches paragraph spacing */
+}
+
+.review-main li {
+    margin-bottom: 0.75rem; /* Adds breathing room between list items */
+}
+
+/* 4. Make the bold intro text on list items stand out clearly */
+.review-main li strong {
+    color: var(--text-color); /* Ensures it stays visible in dark mode */
 }
