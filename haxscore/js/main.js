@@ -18,6 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
     //     });
     // }
 
+    // //favicon - broken due to caching issues, will fix in future iterations
+    // const favicon = document.getElementById('favicon');
+
+    // function updateFavicon(theme) {
+    //     if (!favicon) return;
+
+    //     if (theme === 'dark') {
+    //         favicon.href = '/logos/hax_dark.svg';
+    //     } else {
+    //         favicon.href = '/logos/hax_light.svg';
+    //     }
+    // }
+
     // Theme
     const themeToggleBtn = document.getElementById('theme-toggle');
     
