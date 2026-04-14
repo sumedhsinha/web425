@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Light & Dark Mode
+   1. CSS Variables (Light & Dark Themes)
    ========================================================================== */
 :root {
     --bg-color: #f4f7f6;
@@ -13,14 +13,11 @@
     --border-color: #dddddd;
     --footer-bg: #ffffff;    
     --footer-text: #222222;
-
-    /* Light Mode Hover & Border Colors */
     --nav-btn-hover-bg: #f0f4f8;
     --nav-btn-hover-text: #0056b3;
-    --nav-btn-border: #222222; /* Dark border in Light Mode */
+    --nav-btn-border: #222222; 
 }
 
-/* Changed from @media to a class so the toggle works! */
 body.dark-mode {
     --bg-color: #121212;
     --text-color: #e0e0e0;
@@ -33,15 +30,13 @@ body.dark-mode {
     --border-color: #333333;
     --footer-bg: #000000;    
     --footer-text: #ffffff;
-
-    /* Dark Mode Hover & Border Colors */
     --nav-btn-hover-bg: #1a1a1a;
     --nav-btn-hover-text: #4da3ff;
-    --nav-btn-border: #ffffff; /* White border in Dark Mode */
+    --nav-btn-border: #ffffff; 
 }
 
 /* ==========================================================================
-   Reset & Base Typography
+   2. Reset & Base Typography
    ========================================================================== */
 * {
     margin: 0;
@@ -51,7 +46,7 @@ body.dark-mode {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.125rem; /* TWP ">1rem" feedback */
+    font-size: 1.125rem; 
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -60,24 +55,40 @@ body {
     min-height: 100vh;
 }
 
-main p {
-    /* max-width: 850px;  */
-    margin-bottom: 1.5rem;
+h1, h2, h3, h4 { 
+    color: var(--text-color); 
+    margin-bottom: 1rem; 
+    font-weight: 600; 
 }
 
-/* Specific styling for links inside paragraphs */
-main p a {
-    color: var(--accent-color);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px; /* protect g, p, y */
+h1 { font-size: 2.5rem; }
+
+h2 { 
+    font-size: 2rem; 
+    border-bottom: 2px solid var(--border-color); 
+    padding-bottom: 0.5rem; 
 }
 
-main p a:hover {
-    color: var(--accent-hover);
-    text-decoration-thickness: 2px; /* Gets thicker on hover */
+a { 
+    color: var(--accent-color); 
+    text-decoration: none; 
+    transition: color 0.2s; 
 }
 
+a:hover { 
+    color: var(--accent-hover); 
+    text-decoration: underline; 
+}
+
+cite { 
+    font-style: italic; 
+    color: var(--text-muted); 
+    font-size: 0.9em; 
+}
+
+/* ==========================================================================
+   3. Global Layout & Spacing Utilities
+   ========================================================================== */
 main {
     flex: 1;
     padding: 2rem;
@@ -86,18 +97,31 @@ main {
     width: 100%;
 }
 
-/* Headings */
-h1, h2, h3, h4 { color: var(--text-color); margin-bottom: 1rem; font-weight: 600; }
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; }
+main p {
+    /* max-width: 850px; redundant restriction */
+    margin-bottom: 1.5rem;
+}
 
-/* Text Links & Citations */
-a { color: var(--accent-color); text-decoration: none; transition: color 0.2s; }
-a:hover { color: var(--accent-hover); text-decoration: underline; }
-cite { font-style: italic; color: var(--text-muted); font-size: 0.9em; }
+main p a {
+    color: var(--accent-color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px; 
+}
+
+main p a:hover {
+    color: var(--accent-hover);
+    text-decoration-thickness: 2px; 
+}
+
+.grid-layout, 
+#map, 
+.album-category {
+    margin-bottom: 5rem; 
+}
 
 /* ==========================================================================
-   Navigation Bar
+   4. Header & Navigation
    ========================================================================== */
 header {
     background-color: var(--nav-bg);
@@ -126,41 +150,31 @@ nav {
     font-weight: bold;
 }
 
-.site-logo:hover { color: var(--nav-text); text-decoration: none; }
+.site-logo:hover { 
+    color: var(--nav-text); 
+    text-decoration: none; 
+}
 
 .logo-img {
     height: 100px; 
     width: 100px; 
     display: block;
-    /* Scale the image up visually (1.2 = 120% size, 1.5 = 150% size) */
     transform: scale(1.2); 
-    /* Forces it to scale outward to the right, so it doesn't clip off the left edge of the screen */
     transform-origin: left center;
 }
 
+.dark-logo { display: none; }
+body.dark-mode .light-logo { display: none; }
+body.dark-mode .dark-logo { display: block; }
 
-.dark-logo {
-    display: none;
-}
-
-
-body.dark-mode .light-logo {
-    display: none;
-}
-
-body.dark-mode .dark-logo {
-    display: block;
-}
-
-/* Segmented Container setup */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 0; /* Removed gap so buttons touch */
+    gap: 0; 
     align-items: center; 
+    
 }
 
-/* Segmented Boxy Link Styles */
 .nav-links a {
     display: block;
     color: var(--nav-text);
@@ -169,13 +183,12 @@ body.dark-mode .dark-logo {
     text-decoration: none;
     padding: 0.6rem 1.2rem;
     border: 1px solid var(--nav-btn-border);
-    margin-left: -1px; /* The Magic: Overlaps borders so they don't look double thick where they touch */
+    margin-left: -1px; 
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* Round ONLY the outer corners of the first and last links */
 .nav-links li:first-child a {
-    
+    margin-left: 0;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
 }
@@ -185,15 +198,13 @@ body.dark-mode .dark-logo {
     border-bottom-right-radius: 6px;
 }
 
-/* Hover Effect */
 .nav-links a:hover {
     background-color: var(--nav-btn-hover-bg);
     color: var(--nav-btn-hover-text);
-    position: relative; /* Brings hovered item to front so its border doesn't get covered by siblings */
+    position: relative; 
     z-index: 1;
 }
 
-/* Theme Toggle Button */
 .theme-btn {
     background: var(--nav-bg);
     border: 1px solid var(--nav-btn-border);
@@ -202,7 +213,7 @@ body.dark-mode .dark-logo {
     border-radius: 6px;
     cursor: pointer;
     font-size: 1rem;
-    margin-left: 1rem; /* Space between nav links and button */
+    margin-left: 1rem; 
     transition: background 0.2s ease, transform 0.15s ease;
 }
 
@@ -212,7 +223,7 @@ body.dark-mode .dark-logo {
 }
 
 /* ==========================================================================
-   Map Container (Index Page)
+   5. UI Components (Cards, Map, Gallery)
    ========================================================================== */
 #map {
     height: 600px;
@@ -223,9 +234,6 @@ body.dark-mode .dark-logo {
     z-index: 1; 
 }
 
-/* ==========================================================================
-   Cards (Grid Layouts)
-   ========================================================================== */
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -246,18 +254,13 @@ body.dark-mode .dark-logo {
 .card h3 { margin-bottom: 0.5rem; font-size: 1.25rem; }
 .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
 
-/* Short Card (Used in Map Popups) */
 .short-card { text-align: center; }
 .short-card h4 { margin-bottom: 0.5rem; color: #333; }
 .short-card p { font-size: 0.85rem; margin-bottom: 0.5rem; }
 
-/* Long Card (Used in Reviews Hub) */
 .long-card .card-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; display: block; }
 .long-card .read-more { font-weight: bold; }
 
-/* ==========================================================================
-   Image Gallery & Albums
-   ========================================================================== */
 .album-category { margin-bottom: 3rem; }
 .gallery-grid {
     display: grid;
@@ -287,21 +290,129 @@ figcaption {
     font-style: italic;
 }
 
-/* to give readers some space between sections */
-.grid-layout, 
-#map, 
-.album-category {
-    margin-bottom: 5rem; 
+/* ==========================================================================
+   6. Individual Review Pages
+   ========================================================================== */
+.review-header {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1.5rem;
+}
+
+.review-header h1 {
+    margin-bottom: 0.25rem;
+    font-size: 2.8rem;
+}
+
+.review-meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.review-header,
+.review-main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 2.5rem;
+    align-items: start; 
+}
+
+/* Review Typography */
+.review-main p, 
+.review-main li {
+    font-size: 1.125rem; 
+    line-height: 1.7;    
+}
+
+.review-main h3 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;   
+    margin-bottom: 1rem;  
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 0.5rem;
+}
+
+.review-main ul {
+    margin-left: 1.5rem;  
+    margin-bottom: 1.5rem; 
+}
+
+.review-main li {
+    margin-bottom: 0.75rem; 
+}
+
+.review-main li strong {
+    color: var(--text-color); 
+}
+
+/* Review Sidebar */
+.review-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.review-sidebar .card h3 {
+    font-size: 1.15rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.clean-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.clean-list li {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+/* Review Media Components */
+.hero-img-container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.hero-img-container img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.hero-caption {
+    text-align: center;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.works-cited p {
+    padding-left: 2rem;
+    text-indent: -2rem;
+    margin-bottom: 1rem;
+    word-wrap: break-word;
+    font-size: 0.95rem;
 }
 
 /* ==========================================================================
-   Footer
+   7. Footer
    ========================================================================== */
 footer {
     background-color: var(--footer-bg);
     color: var(--footer-text); 
     text-align: center;
-    padding: 0.80rem 1.5rem; /* added 0.75rem to reduce whitespace because its too big */
+    padding: 0.80rem 1.5rem; 
     margin-top: auto;
 }
 
@@ -315,7 +426,7 @@ footer {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 24px;      /* reduced */        
+    gap: 24px;              
     margin: 10px 0;          
 }
 
@@ -338,133 +449,10 @@ footer {
 }
 
 /* ==========================================================================
-   Individual Review Layout (Multi-column & Tiles)
+   8. Media Queries (Responsive Adjustments)
    ========================================================================== */
-.review-header {
-    margin-bottom: 2rem;
-    border-bottom: 2px solid var(--border-color);
-    padding-bottom: 1.5rem;
-}
-
-.review-header h1 {
-    margin-bottom: 0.25rem;
-    font-size: 2.8rem;
-}
-
-.review-meta {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    display: block;
-    margin-top: 0.5rem;
-}
-
-/* Forces a permanent buffer zone so text never touches the left/right edges */
-.review-header,
-.review-main {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-/* 
-Divides the page into ~66% left (main) and ~33% right (sidebar) 
-*/
-.review-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr; 
-    gap: 2.5rem;
-    align-items: start; /* Prevents sidebar cards from stretching vertically to match main content */
-}
-
-/* Sidebar styling using existing .card class */
-.review-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-/* Tweak card headers for the sidebar */
-.review-sidebar .card h3 {
-    font-size: 1.15rem;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Clean list styling for Pros/Cons and Links */
-.clean-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.clean-list li {
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-}
-
-/* Hero Image Wrapper */
-.hero-img-container {
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
-.hero-img-container img {
-    width: 100%;
-    height: auto;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-}
-
-.hero-caption {
-    text-align: center;
-    display: block;
-    margin-top: 0.5rem;
-}
-
-/* Works Cited Hanging Indent */
-.works-cited p {
-    padding-left: 2rem;
-    text-indent: -2rem;
-    margin-bottom: 1rem;
-    word-wrap: break-word;
-    font-size: 0.95rem;
-}
-
-/* Responsive: Stacks the sidebar UNDER the main content on smaller screens */
 @media (max-width: 900px) {
     .review-grid {
         grid-template-columns: 1fr;
     }
-}
-
-/* 1. Unify the text size and line height inside the main review body */
-.review-main p, 
-.review-main li {
-    font-size: 1.125rem; /* Matches your global body font size */
-    line-height: 1.7;    /* Slightly taller line-height for easier reading of long blocks */
-}
-
-/* 2. Control the spacing around the H3 subheadings */
-.review-main h3 {
-    font-size: 1.5rem;
-    margin-top: 2.5rem;   /* Pushes the heading away from the previous section */
-    margin-bottom: 1rem;  /* Keeps it close to its own paragraph */
-    border-bottom: 1px solid var(--border-color); /* Adds a clean visual separator */
-    padding-bottom: 0.5rem;
-}
-
-/* 3. Fix the bulleted lists (Features & Performance Tests) */
-.review-main ul {
-    margin-left: 1.5rem;  /* Indents the bullets properly */
-    margin-bottom: 1.5rem; /* Matches paragraph spacing */
-}
-
-.review-main li {
-    margin-bottom: 0.75rem; /* Adds breathing room between list items */
-}
-
-/* 4. Make the bold intro text on list items stand out clearly */
-.review-main li strong {
-    color: var(--text-color); /* Ensures it stays visible in dark mode */
 }
