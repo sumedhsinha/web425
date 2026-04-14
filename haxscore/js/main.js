@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lng: -74.4520966,
                 org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
                 location: "College Ave Student Center, New Brunswick, NJ",
-                summary: "My first ever hackathon during my freshman year. Exciting experience! <cite>Reviewed Feb 2023</cite>",
+                summary: "The first ever hackathon for our founder during his freshmen year. Exciting experience! <cite>Reviewed Feb 2023</cite>",
                 link: "reviews/hackru-2023.html"
             },
             {
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lng: -72.92229596365036,
                 org: "Yale University",
                 location: "OC Marsh Hall, New Haven, CT",
-                summary: "Secured a DOUBLE WIN, 2 awards totalling more than $2,000!! <cite>Reviewed Mar 2026</cite>",
+                summary: "Secured a DOUBLE WIN, 2 awards totalling more than $2,000!! A very fruitful experience! <cite>Reviewed Mar 2026</cite>",
                 link: "reviews/yhack-2026.html"
             }
         ];
