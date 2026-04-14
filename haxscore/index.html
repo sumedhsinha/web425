@@ -7,7 +7,7 @@
     <!-- get icons in scope -->
     <script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
     <title>HaxScore - Your Hub for Hackathon Reviews</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css"> <!-- This has to be affixed with .. for src pages and reviews -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
 </head>
@@ -15,25 +15,17 @@
 
     <header>
         <nav>
-            <!-- <a href="index.html" class="site-logo"><img src="logos/hax_dark.svg" alt="Haxscore Site Logo" class="logo-img"></a> -->
 
-            <!-- <a href="index.html" class="site-logo">
-            <picture>
-                <source srcset="logos/hax_dark.svg" media="(prefers-color-scheme: dark)">
-                
-                <img src="logos/hax_light.svg" alt="Haxscore Site Logo" class="logo-img">
-            </picture>
-            </a> -->
-
-            <a href="index.html" class="site-logo">
-            <img src="logos/hax_light.svg" alt="Haxscore Site Logo" class="logo-img light-logo">
-            <img src="logos/hax_dark.svg" alt="Haxscore Site Logo" class="logo-img dark-logo">
+            <a href="index.html" class="site-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="logos/hax_light.svg" alt="Haxscore Site Logo" class="logo-img light-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="logos/hax_dark.svg" alt="Haxscore Site Logo" class="logo-img dark-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
             </a>
 
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li> <!-- This has to be affixed with .. for src pages and reviews -->
                 <li><a href="src/review-hub.html">Reviews</a></li>
                 <li><a href="src/images.html">Images</a></li>
+                <li><a href="src/contact.html"> </a><li>
                 <li><a href="src/about.html">About</a></li>
             </ul>
 
@@ -41,6 +33,8 @@
 
         </nav>
     </header>
+
+
 
     <main>
         <h1 class="welcome-title"> HaxScore - Your Hub for Hackathon Reviews </h1>
@@ -52,7 +46,7 @@
         Here are the links to different sections of this website. (Work in Progress)
         </p>
 
-        <h1>Map of Reviews</h1>
+        <h2>Map of Reviews</h2>
         <p>Explore hackathons I've visited! Click on a pin to read a quick preview, and read more in the in-depth reviews.</p>
         <p>Important Note: This map will not work correctly when loaded within a local environment (when viewed from Finder or Files) due to restrictions within OpenStreetMaps.</p>
         
@@ -60,8 +54,13 @@
     
     </main>
 
+
+
+
     <footer>
-            <!-- <img src="logos/tag.png" alt="Reduce Waste Secure the Planet footer tagline" class="footer-tagline"> -->
+            <img src="logos/line.png" alt="STRIVE FOR THE CHALLENGE tagline" class="footer-tagline">
+
+            <p></p>
 
             <div class="social-icons">
                     <a href="https://facebook.com" target="_blank" aria-label="Facebook">
@@ -82,6 +81,8 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/main.js"></script>
+
+
 
 </body>
 </html>

@@ -274,6 +274,13 @@ footer {
     margin-top: auto;
 }
 
+.footer-tagline {
+    height: 45px;
+    width: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
 .social-icons {
     display: flex;
     justify-content: center;
