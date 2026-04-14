@@ -1,4 +1,6 @@
-/* Light & Dark Mode */
+/* ==========================================================================
+   CSS Variables (Light & Dark Mode)
+   ========================================================================== */
 :root {
     --bg-color: #f4f7f6;
     --text-color: #222222;
@@ -6,31 +8,41 @@
     --card-bg: #ffffff;
     --accent-color: #0056b3;
     --accent-hover: #003d82;
-    --nav-bg: #ffffff;       /* White header in light mode */
-    --nav-text: #222222;     /* Dark text in light mode */
+    --nav-bg: #ffffff;       
+    --nav-text: #222222;     
     --border-color: #dddddd;
-    --footer-bg: #ffffff;    /* same as header */
+    --footer-bg: #ffffff;    
     --footer-text: #222222;
+
+    /* Light Mode Hover & Border Colors */
+    --nav-btn-hover-bg: #f0f4f8;
+    --nav-btn-hover-text: #0056b3;
+    --nav-btn-border: #222222; /* Dark border in Light Mode */
 }
 
-/* system preference for now, will add a toggle */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: #121212;
-        --text-color: #e0e0e0;
-        --text-muted: #aaaaaa;
-        --card-bg: #1e1e1e;
-        --accent-color: #4da3ff;
-        --accent-hover: #80c1ff;
-        --nav-bg: #000000;       /* Black header in dark mode */
-        --nav-text: #ffffff;     /* White text in dark mode */
-        --border-color: #333333;
-        --footer-bg: #000000;    
-        --footer-text: #ffffff;
-    }
+/* Changed from @media to a class so the toggle works! */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --text-muted: #aaaaaa;
+    --card-bg: #1e1e1e;
+    --accent-color: #4da3ff;
+    --accent-hover: #80c1ff;
+    --nav-bg: #000000;       
+    --nav-text: #ffffff;     
+    --border-color: #333333;
+    --footer-bg: #000000;    
+    --footer-text: #ffffff;
+
+    /* Dark Mode Hover & Border Colors */
+    --nav-btn-hover-bg: #1a1a1a;
+    --nav-btn-hover-text: #4da3ff;
+    --nav-btn-border: #ffffff; /* White border in Dark Mode */
 }
 
-/* Reset & Base Typography */
+/* ==========================================================================
+   Reset & Base Typography
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -65,14 +77,16 @@ a { color: var(--accent-color); text-decoration: none; transition: color 0.2s; }
 a:hover { color: var(--accent-hover); text-decoration: underline; }
 cite { font-style: italic; color: var(--text-muted); font-size: 0.9em; }
 
-/* Navigation Bar */
+/* ==========================================================================
+   Navigation Bar
+   ========================================================================== */
 header {
     background-color: var(--nav-bg);
-    padding: 1rem 2rem;
+    padding: 1rem 0; 
     position: sticky;
     top: 0;
-    z-index: 1000; /* Stays above map */
-    border-bottom: 1px solid var(--border-color); /* Added a border to separate white header from white background */
+    z-index: 1000; 
+    border-bottom: 1px solid var(--border-color); 
 }
 
 nav {
@@ -81,6 +95,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem; 
 }
 
 .site-logo {
@@ -100,31 +115,93 @@ nav {
     display: block;
 }
 
+
+.dark-logo {
+    display: none;
+}
+
+
+body.dark-mode .light-logo {
+    display: none;
+}
+
+body.dark-mode .dark-logo {
+    display: block;
+}
+
+/* Segmented Container setup */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 0; /* Removed gap so buttons touch */
     align-items: center; 
 }
 
+/* Segmented Boxy Link Styles */
 .nav-links a {
+    display: block;
     color: var(--nav-text);
+    background-color: var(--nav-bg);
     font-weight: 500;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--nav-btn-border);
+    margin-left: -1px; /* The Magic: Overlaps borders so they don't look double thick where they touch */
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.nav-links a:hover { color: var(--accent-color); text-decoration: none; }
+/* Round ONLY the outer corners of the first and last links */
+.nav-links li:first-child a {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
 
-/* Map Container (Index Page) */
+.nav-links li:last-child a {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+    background-color: var(--nav-btn-hover-bg);
+    color: var(--nav-btn-hover-text);
+    position: relative; /* Brings hovered item to front so its border doesn't get covered by siblings */
+    z-index: 1;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+    background: var(--nav-bg);
+    border: 1px solid var(--nav-btn-border);
+    color: var(--nav-text);
+    padding: 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 1rem; /* Space between nav links and button */
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.theme-btn:hover {
+    background: var(--nav-btn-hover-bg);
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Map Container (Index Page)
+   ========================================================================== */
 #map {
     height: 600px;
     width: 100%;
     border-radius: 8px;
     border: 1px solid var(--border-color);
     margin-top: 1rem;
-    z-index: 1; /* Keep below nav */
+    z-index: 1; 
 }
 
-/* Cards (Grid Layouts) */
+/* ==========================================================================
+   Cards (Grid Layouts)
+   ========================================================================== */
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -147,16 +224,16 @@ nav {
 
 /* Short Card (Used in Map Popups) */
 .short-card { text-align: center; }
-.short-card h4 { margin-bottom: 0.5rem; color: #333; } /* Forced dark for Leaflet popup default */
+.short-card h4 { margin-bottom: 0.5rem; color: #333; }
 .short-card p { font-size: 0.85rem; margin-bottom: 0.5rem; }
 
 /* Long Card (Used in Reviews Hub) */
 .long-card .card-meta { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; display: block; }
 .long-card .read-more { font-weight: bold; }
 
-
-
-/* Image Gallery & Albums */
+/* ==========================================================================
+   Image Gallery & Albums
+   ========================================================================== */
 .album-category { margin-bottom: 3rem; }
 .gallery-grid {
     display: grid;
@@ -186,10 +263,12 @@ figcaption {
     font-style: italic;
 }
 
-/* Footer */
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 footer {
     background-color: var(--footer-bg);
-    color: var(--nav-text); /* Pulling from variables so text stays visible */
+    color: var(--footer-text); 
     text-align: center;
     padding: 1.5rem;
     margin-top: auto;
@@ -202,14 +281,20 @@ footer {
     margin: 20px 0;          
 }
 
-.social-icons a {
+.social-icons a,
+.social-icons a i,
+.social-icons a svg {
     display: inline-block;
-    color: #ffffff;       
+    color: var(--footer-text); 
+    fill: var(--footer-text);
     font-size: 28px;       
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease, fill 0.2s ease;
 }
 
-.social-icons a:hover {
+.social-icons a:hover,
+.social-icons a:hover i,
+.social-icons a:hover svg {
     transform: translateY(-3px); 
-    color: #d6e2d6;        
+    color: var(--accent-color);        
+    fill: var(--accent-color);        
 }

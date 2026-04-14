@@ -1,11 +1,38 @@
-// Removed the require('react') line
+// Script for the Map and Light/Dark Mode Toggle
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Theme
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    
+    // Check if user has a saved preference, otherwise default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    // Apply the saved theme on load
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        if (themeToggleBtn) themeToggleBtn.innerText = '☀️';
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggleBtn.innerText = '☀️';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggleBtn.innerText = '🌙';
+            }
+        });
+    }
+
+    // map
     const mapElement = document.getElementById('map');
     
     if (mapElement) {
-        // Initialize map centered on the NY/NJ/PA region
+        // Initialize map centered on the NY/NJ/PA TriState region
         const map = L.map('map').setView([40.7, -74.5], 7);
 
         // Add OpenStreetMap tiles
