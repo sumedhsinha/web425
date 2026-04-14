@@ -61,7 +61,7 @@ body {
 }
 
 main p {
-    max-width: 850px; 
+    /* max-width: 850px;  */
     margin-bottom: 1.5rem;
 }
 
