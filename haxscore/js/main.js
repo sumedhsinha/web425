@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lng: -79.94219197908494,
                 org: "NexHacks x Carnegie Mellon University",
                 location: "Jared L Cohon Hall, Pittsburgh, PA",
-                summary: "The inaugural edition of NexHacks at CMU. Exciting to see how this new hackathon evolves! <cite>Reviewed Jan 2026</cite>",
+                summary: "The inaugural edition of NexHacks at CMU. Exciting to see how this new hackathon evolves! <cite>Reviewed Apr 2026</cite>",
                 link: "reviews/nexhacks-2026.html"
             },
             {
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lng: -72.92229596365036,
                 org: "Yale University",
                 location: "OC Marsh Hall, New Haven, CT",
-                summary: "Secured a DOUBLE WIN, 2 awards totalling more than $2,000!! A very fruitful experience! <cite>Reviewed Mar 2026</cite>",
+                summary: "Secured a DOUBLE WIN, 2 awards totalling more than $2,000!! A very fruitful experience! <cite>Reviewed Apr 2026</cite>",
                 link: "reviews/yhack-2026.html"
             }
         ];

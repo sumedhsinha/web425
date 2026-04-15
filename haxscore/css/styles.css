@@ -285,10 +285,19 @@ body.dark-mode .dark-logo { display: block; }
     width: 100%;
     height: 250px; 
     object-fit: contain; 
-    background-color: var(--card-bg); /* Fills any leftover space on the sides w card background color */
+    background-color: var(--card-bg);
     border-radius: 8px;
     border: 1px solid var(--border-color);
     padding: 0.5rem;
+}
+
+.inventory-grid .gallery-item:not(.no-square) img {
+    width: 100%;
+    height: auto; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    background-color: transparent; 
+    padding: 0; 
 }
 
 figcaption {
@@ -297,6 +306,12 @@ figcaption {
     color: var(--text-muted);
     margin-top: 0.5rem;
     font-style: italic;
+}
+
+figcaption cite {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.95em;   
 }
 
 /* ==========================================================================
