@@ -18,18 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
     //     });
     // }
 
-    // //favicon - broken due to caching issues, will fix in future iterations
-    // const favicon = document.getElementById('favicon');
+    // Favicon - switches with theme
+    const favicon = document.getElementById('favicon');
 
-    // function updateFavicon(theme) {
-    //     if (!favicon) return;
-
-    //     if (theme === 'dark') {
-    //         favicon.href = '/logos/hax_dark.svg';
-    //     } else {
-    //         favicon.href = '/logos/hax_light.svg';
-    //     }
-    // }
+    function updateFavicon(isDarkMode) {
+        if (!favicon) return;
+        const path = isDarkMode ? 'logos/hax_dark.svg' : 'logos/hax_light.svg';
+        favicon.href = path;
+    }
 
     // Theme
     const themeToggleBtn = document.getElementById('theme-toggle');
@@ -41,6 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentTheme === 'dark') {
         document.body.classList.add('dark-mode');
         if (themeToggleBtn) themeToggleBtn.innerText = '☀️';
+        updateFavicon(true);
+    } else {
+        updateFavicon(false);
     }
 
     if (themeToggleBtn) {
@@ -50,9 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (document.body.classList.contains('dark-mode')) {
                 localStorage.setItem('theme', 'dark');
                 themeToggleBtn.innerText = '☀️';
+                updateFavicon(true);
             } else {
                 localStorage.setItem('theme', 'light');
                 themeToggleBtn.innerText = '🌙';
+                updateFavicon(false);
             }
         });
     }
@@ -138,29 +139,233 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         ];
 
-        // Add pins to map
-        hackathons.forEach(hack => {
-            
-            // Only attempt to add a marker if we have valid coordinates
-            if (hack.lat !== undefined && hack.lng !== undefined) {
-                
-                // Short Preview Card inside the popup
-                const popupContent = `
-                    <div class="short-card">
-                        <h4>${hack.name}</h4>
-                        <p class="location-text">${hack.location}</p>
-                        <p class="org">${hack.org}</p>
-                        <p>${hack.summary}</p>
-                        <a href="${hack.link}">Read the Full Review &rarr;</a>
-                    </div>
-                `;
-
-                L.marker([hack.lat, hack.lng])
-                    .addTo(map)
-                    .bindPopup(popupContent);
-            } else {
-                console.warn(`Skipping map marker for ${hack.name} due to missing coordinates.`);
+        // Timeline and Map Navigation
+        class EventNavigator {
+            constructor(hackathons) {
+                this.hackathons = hackathons;
+                this.currentIndex = 0;
+                this.map = map;
+                this.markers = [];
+                this.init();
             }
+            
+            init() {
+                // Build timeline
+                this.buildTimeline();
+                
+                // Add all markers
+                this.hackathons.forEach((hack, index) => {
+                    if (hack.lat !== undefined && hack.lng !== undefined) {
+                        const popupContent = `
+                            <div class="short-card">
+                                <h4>${hack.name}</h4>
+                                <p class="location-text">${hack.location}</p>
+                                <p class="org">${hack.org}</p>
+                                <p>${hack.summary}</p>
+                                <a href="${hack.link}">Read the Full Review &rarr;</a>
+                            </div>
+                        `;
+
+                        const marker = L.marker([hack.lat, hack.lng])
+                            .addTo(map)
+                            .bindPopup(popupContent);
+                        
+                        // Click marker to select event
+                        marker.on('click', () => this.selectEvent(index));
+                        this.markers.push(marker);
+                    }
+                });
+                
+                // Setup navigation buttons
+                const prevBtn = document.getElementById('prevEvent');
+                const nextBtn = document.getElementById('nextEvent');
+                
+                if (prevBtn) prevBtn.addEventListener('click', () => this.previousEvent());
+                if (nextBtn) nextBtn.addEventListener('click', () => this.nextEvent());
+                
+                // Update display
+                this.updateDisplay();
+            }
+            
+            buildTimeline() {
+                const timelineEventsContainer = document.getElementById('timelineEvents');
+                if (!timelineEventsContainer) return;
+                
+                this.hackathons.forEach((hack, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'timeline-event';
+                    if (index === 0) btn.classList.add('active');
+                    
+                    // Extract year from event name or use current year
+                    const year = hack.name.match(/\d{4}/) ? hack.name.match(/\d{4}/)[0] : new Date().getFullYear();
+                    
+                    btn.innerHTML = `
+                        ${hack.name.split(' - ')[0]}
+                        <span class="timeline-event-date">${year}</span>
+                    `;
+                    
+                    btn.addEventListener('click', () => this.selectEvent(index));
+                    timelineEventsContainer.appendChild(btn);
+                });
+            }
+            
+            selectEvent(index) {
+                this.currentIndex = index;
+                this.updateDisplay();
+            }
+            
+            updateDisplay() {
+                const hack = this.hackathons[this.currentIndex];
+                
+                // Update map card header
+                const eventName = document.getElementById('eventName');
+                const eventCounter = document.getElementById('eventCounter');
+                const eventTotal = document.getElementById('eventTotal');
+                
+                if (eventName) eventName.textContent = hack.name;
+                if (eventCounter) eventCounter.textContent = this.currentIndex + 1;
+                if (eventTotal) eventTotal.textContent = this.hackathons.length;
+                
+                // Update navigation buttons
+                const prevBtn = document.getElementById('prevEvent');
+                const nextBtn = document.getElementById('nextEvent');
+                
+                if (prevBtn) prevBtn.disabled = this.currentIndex === 0;
+                if (nextBtn) nextBtn.disabled = this.currentIndex === this.hackathons.length - 1;
+                
+                // Update timeline active state
+                const timelineButtons = document.querySelectorAll('.timeline-event');
+                timelineButtons.forEach((btn, index) => {
+                    btn.classList.toggle('active', index === this.currentIndex);
+                });
+                
+                // Highlight marker and open popup
+                if (this.markers[this.currentIndex]) {
+                    this.markers[this.currentIndex].openPopup();
+                    this.map.panTo(this.markers[this.currentIndex].getLatLng());
+                }
+            }
+            
+            previousEvent() {
+                if (this.currentIndex > 0) {
+                    this.selectEvent(this.currentIndex - 1);
+                }
+            }
+            
+            nextEvent() {
+                if (this.currentIndex < this.hackathons.length - 1) {
+                    this.selectEvent(this.currentIndex + 1);
+                }
+            }
+        }
+        
+        // Initialize event navigator
+        new EventNavigator(hackathons);
+    }
+});
+
+// Image Modal Functionality - Works on any page
+class ImageModal {
+    constructor() {
+        this.modal = document.getElementById('imageModal');
+        if (!this.modal) return; // Exit if modal doesn't exist on page
+        
+        this.modalImage = document.getElementById('modalImage');
+        this.modalCaption = document.getElementById('modalCaption');
+        this.modalCounter = document.getElementById('modalCounter');
+        this.modalClose = document.getElementById('modalClose');
+        this.prevBtn = document.getElementById('prevBtn');
+        this.nextBtn = document.getElementById('nextBtn');
+        
+        this.images = [];
+        this.currentIndex = 0;
+        
+        this.init();
+    }
+    
+    init() {
+        // Get all images from figures and hero containers
+        const heroImages = Array.from(document.querySelectorAll('.hero-img-container img'));
+        const galleryImages = Array.from(document.querySelectorAll('.gallery-item img'));
+        this.images = [...heroImages, ...galleryImages];
+        
+        if (this.images.length === 0) return; // No images to work with
+        
+        // Add click listeners to images
+        this.images.forEach((img, index) => {
+            img.addEventListener('click', () => this.openModal(index));
+        });
+        
+        // Add close button listener
+        this.modalClose.addEventListener('click', () => this.closeModal());
+        
+        // Add nav buttons
+        this.prevBtn.addEventListener('click', () => this.showPrevious());
+        this.nextBtn.addEventListener('click', () => this.showNext());
+        
+        // Close on background click
+        this.modal.addEventListener('click', (e) => {
+            if (e.target === this.modal) this.closeModal();
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!this.modal.classList.contains('active')) return;
+            if (e.key === 'Escape') this.closeModal();
+            if (e.key === 'ArrowLeft') this.showPrevious();
+            if (e.key === 'ArrowRight') this.showNext();
         });
     }
+    
+    openModal(index) {
+        this.currentIndex = index;
+        this.updateModal();
+        this.modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    closeModal() {
+        this.modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+    
+    updateModal() {
+        const img = this.images[this.currentIndex];
+        const figure = img.closest('figure');
+        const caption = figure ? figure.querySelector('figcaption') : null;
+        
+        this.modalImage.src = img.src;
+        this.modalImage.alt = img.alt;
+        
+        if (caption) {
+            this.modalCaption.innerHTML = caption.innerHTML;
+        } else {
+            this.modalCaption.innerHTML = '';
+        }
+        
+        this.modalCounter.textContent = `${this.currentIndex + 1} / ${this.images.length}`;
+        
+        // Update button states
+        this.prevBtn.disabled = this.currentIndex === 0;
+        this.nextBtn.disabled = this.currentIndex === this.images.length - 1;
+    }
+    
+    showPrevious() {
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.updateModal();
+        }
+    }
+    
+    showNext() {
+        if (this.currentIndex < this.images.length - 1) {
+            this.currentIndex++;
+            this.updateModal();
+        }
+    }
+}
+
+// Initialize modal when DOM is loaded (if it exists on the page)
+document.addEventListener('DOMContentLoaded', () => {
+    new ImageModal();
 });

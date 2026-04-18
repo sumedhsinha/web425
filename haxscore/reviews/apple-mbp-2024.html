@@ -6,6 +6,7 @@
     <script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
     <title>Apple MacBook Pro M4 Review | HaxScore</title>
     <link rel="stylesheet" href="../css/styles.css"> 
+    <link id="favicon" rel="icon" href="../logos/hax_light.svg"> 
 </head>
 <body>
 
@@ -162,6 +163,21 @@
         <p>Created by Sumedh Sinha | Web 425 | sumedh.sinha@rutgers.edu | &copy; 2026 Sumedh Sinha. All rights reserved.</p>
     </footer>
 
-    <script src="../js/main.js"></script> 
+    <script src="../js/main.js"></script>
+
+    <!-- Image Modal Viewer -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+            <div class="modal-counter" id="modalCounter"></div>
+            <div class="modal-nav">
+                <button id="prevBtn">← Previous</button>
+                <button id="nextBtn">Next →</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
