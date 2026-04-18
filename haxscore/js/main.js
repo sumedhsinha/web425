@@ -98,6 +98,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 summary: "Focused on healthcare innovation, with great industry mentors. Won $750! <cite>Reviewed Dec 2024</cite>",
                 link: "reviews/healthhack-2024.html"
             },
+
+            {
+                name: "Rutgers Datathon - 2025",
+                lat: 40.52342741886011, 
+                lng: -74.4594333645459,
+                org: "Rutges Data Science Club x Rutgers University",
+                location: "Busch Student Center, Piscataway, NJ",
+                summary: "This event was organized by Rutgers Data Science Club in collaboration with some other clubs and a sponsor",
+                link: "reviews/nda.html"
+            },
+
             {
                 name: "NexHacks - 2026 (Inaugural Edition)",
                 lat: 40.44402161381973,
