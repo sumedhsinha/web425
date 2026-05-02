@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- get icons in scope -->
     <script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
-    <title>Sketches | HaxScore</title>
+    <title>Map of Reviews | HaxScore</title>
     <link rel="stylesheet" href="../css/styles.css"> <!-- This has to be affixed with .. for src pages and reviews -->
-    <link id="favicon" rel="icon" type="image/svg+xml" href="../logos/hax_light.svg">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
+    <link id="favicon" rel="icon" type="image/svg+xml" href="../logos/hax_light.svg">
 </head>
 
 <body>
@@ -40,27 +39,49 @@
     </header>
 
     <main>
-        <h1>In-Class Work</h1>
-        <p>A collection of concepts designed during lecture.</p>
+        <h1 class="welcome-title"><i class="fa-regular fa-map"></i> Map of Reviews</h1>
+        
+        <p>Explore hackathons we've visited! Click on a pin to read a quick preview, and read more in the in-depth reviews.</p>
+        <p><i class="fa-solid fa-asterisk"></i> Important Note : This map will not work correctly when loaded within a local environment (when viewed from Finder or Files) due to restrictions within OpenStreetMaps. Also, please make sure to reload each page on the site forcibly if needed because browsers often cache elements (cmd+shift+R on Mac, ctrl+shift+R on Windows).</p>
 
-        <div class="album-category">
-            <div class="gallery-grid">
-                
-                <figure class="gallery-item">
-                    <img src="../sketches/april_1_2026.jpeg" alt="April 1, 2026 Sketch">
-                    <figcaption>April 1, 2026</figcaption>
-                </figure>
+        <hr>
+        <p></p>
+        <p><b>DISCLAIMER</b>: <u>This website is for educational purposes only, and created as part of my coursework for Rutgers University - Web Authoring 425 (Professor Bass) during Spring 2026. The views expressed here do not necessarily reflect the official position of any organization.</u></p>
+        <hr>
+        
+        <!-- Timeline Navigation -->
+        <div class="timeline-container">
+            <div class="timeline-label"><i class="fa-regular fa-calendar"></i> Event Timeline</div>
+            <div class="timeline-events" id="timelineEvents"></div>
+        </div>
 
-                <figure class="gallery-item">
-                    <img src="../sketches/april_8_2026.jpeg" alt="April 8, 2026 Sketch">
-                    <figcaption>April 8, 2026</figcaption>
-                </figure>
-
+        <!-- Map Card Header with Navigation -->
+        <div class="map-card-container">
+            <div class="map-card-header">
+                <h3 class="map-card-title" id="mapCardTitle">
+                    <span id="eventName">Select an event</span>
+                </h3>
+                <div class="map-card-nav">
+                    <button id="prevEvent" aria-label="Previous event">←</button>
+                    <span class="map-card-counter">
+                        <span id="eventCounter">0</span> / <span id="eventTotal">0</span>
+                    </span>
+                    <button id="nextEvent" aria-label="Next event">→</button>
                 </div>
+            </div>
         </div>
         
+        <div id="map"></div>
+
+        <hr>
+        <p></p>
+        <p><b>DISCLAIMER</b>: <u>This website is for educational purposes only, and created as part of my coursework for Rutgers University - Web Authoring 425 (Professor Bass) during Spring 2026. The views expressed here do not necessarily reflect the official position of any organization.</u></p>
+        <hr>
+        <p></p>
+
     </main>
 
+    
     <footer>
             <img src="../logos/line.png" alt="STRIVE FOR THE CHALLENGE tagline" class="footer-tagline"> <!-- This has to be affixed with .. for src pages and reviews -->
 
@@ -97,6 +118,8 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../js/main.js"></script> <!-- This has to be affixed with .. for src pages and reviews -->
+
+
 
 </body>
 </html>
