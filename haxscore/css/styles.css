@@ -334,6 +334,38 @@ body.dark-mode .dark-logo { display: block; }
     margin-bottom: 1rem;
 }
 
+.card-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.card-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-link:hover .card-image img {
+    transform: scale(1.05);
+}
+
 .short-card { text-align: center; }
 .short-card h4 { 
     margin-bottom: 0.5rem;
