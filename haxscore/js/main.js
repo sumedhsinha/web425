@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mapElement = document.getElementById('map');
     
     if (mapElement) {
-        // Initialize map centered on the NY/NJ/PA TriState region
-        const map = L.map('map').setView([40.7, -74.5], 7);
+        // Initialize map centered on New Brunswick / Piscataway, NJ
+        const map = L.map('map').setView([40.50567186596019, -74.45408580372482], 13);
 
         // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
