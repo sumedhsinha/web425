@@ -23,8 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateFavicon(isDarkMode) {
         if (!favicon) return;
-        const path = isDarkMode ? 'logos/hax_dark.svg' : 'logos/hax_light.svg';
-        favicon.href = path;
+        const filename = isDarkMode ? 'hax_dark.svg' : 'hax_light.svg';
+        const currentHref = favicon.getAttribute('href') || '';
+
+        // Preserve the page-specific relative path and only swap light/dark file.
+        if (currentHref.includes('hax_light.svg') || currentHref.includes('hax_dark.svg')) {
+            favicon.setAttribute('href', currentHref.replace(/hax_(light|dark)\.svg$/, filename));
+            return;
+        }
+
+        const lastSlash = currentHref.lastIndexOf('/');
+        const prefix = lastSlash >= 0 ? currentHref.slice(0, lastSlash + 1) : '';
+        favicon.setAttribute('href', `${prefix}${filename}`);
     }
 
     // Theme
@@ -167,7 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (hack.lat !== undefined && hack.lng !== undefined) {
                         const popupContent = `
                             <div class="short-card">
-                                <h4>${hack.name}</h4>
                                 <div class="map-popup-image-frame">
                                     <img src="${hack.image || '../images/intro.png'}" alt="Hackathon event image" class="map-popup-image">
                                 </div>
