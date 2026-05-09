@@ -92,7 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 location: "College Ave Student Center, New Brunswick, NJ",
                 summary: "The first ever hackathon for our founder during his freshmen year. Exciting experience! <cite>Reviewed Feb 2023</cite>",
                 link: "../reviews/hackru-spring-2023.html",
-                image: "../images/merch/IMG_7031.jpeg"
+                image: "../images/merch/IMG_7031.jpeg",
+                funRating: 4
             },
             {
                 name: "HackRU - Spring 2024",
@@ -102,7 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 location: "Busch Student Center, Piscataway, NJ",
                 summary: "Good venue, though the judging criteria was a bit vague. <cite>Reviewed Feb 2024</cite>",
                 link: "../reviews/hackru-spring-2024.html",
-                image: "../images/travel/IMG_2081.jpeg"
+                image: "../images/travel/IMG_2081.jpeg",
+                funRating: 4
             },
             {
                 name: "HealthHack - 2024",
@@ -112,7 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 location: "RWJ University Hospital, New Brunswick, NJ",
                 summary: "Focused on healthcare innovation, with great industry mentors. Won $750! <cite>Reviewed Dec 2024</cite>",
                 link: "../reviews/healthhack-2024.html",
-                image: "../images/healthhack-2024/IMG_7032.jpeg"
+                image: "../images/healthhack-2024/IMG_7032.jpeg",
+                funRating: 5
             },
 
             {
@@ -123,7 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 location: "Busch Student Center, Piscataway, NJ",
                 summary: "This event was organized by Rutgers Data Science Club in collaboration with some other clubs and a sponsor",
                 link: "../reviews/nda.html",
-                image: "../images/travel/IMG_2207.jpeg"
+                image: "../images/travel/IMG_2207.jpeg",
+                funRating: 3
             },
 
             {
@@ -134,7 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 location: "Jared L Cohon Hall, Pittsburgh, PA",
                 summary: "The inaugural edition of NexHacks at CMU. Exciting to see how this new hackathon evolves! <cite>Reviewed Apr 2026</cite>",
                 link: "../reviews/nexhacks-2026.html",
-                image: "../images/nexhacks-2026/IMG_1341.jpeg"
+                image: "../images/nexhacks-2026/IMG_1341.jpeg",
+                funRating: 4
             },
             {
                 name: "UHACCS - Spring 2026",
@@ -144,7 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 location: "Livingston Student Center, Piscataway, NJ",
                 summary: "Small event but learnt a lot. <cite>Reviewed Feb 2026</cite>",
                 link: "../reviews/uhax-2026.html",
-                image: "../images/yhack-2026/IMG_2086.jpeg"
+                image: "../images/yhack-2026/IMG_2086.jpeg",
+                funRating: 3
             },
             {
                 name: "YHack - 2026",
@@ -154,9 +160,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 location: "OC Marsh Hall, New Haven, CT",
                 summary: "Secured a DOUBLE WIN, 2 awards totalling more than $2,000!! A very fruitful experience! <cite>Reviewed Apr 2026</cite>",
                 link: "../reviews/yhack-2026.html",
-                image: "../images/yhack-2026/IMG_2090.jpeg"
+                image: "../images/yhack-2026/IMG_2090.jpeg",
+                funRating: 5
             }
         ];
+
+        function renderFunRating(rating) {
+            const safeRating = Math.max(0, Math.min(5, Number(rating) || 0));
+            let icons = '';
+
+            for (let i = 0; i < 5; i++) {
+                const iconClass = i < safeRating ? 'fa-solid fa-face-smile' : 'fa-regular fa-face-smile';
+                icons += `<i class="${iconClass}" aria-hidden="true"></i>`;
+            }
+
+            return `
+                <div class="fun-rating" aria-label="Fun rating ${safeRating} out of 5">
+                    <span class="fun-rating-icons">${icons}</span>
+                </div>
+            `;
+        }
 
         // Timeline and Map Navigation
         class EventNavigator {
@@ -182,6 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </div>
                                 <p class="location-text">${hack.location}</p>
                                 <p class="org">${hack.org}</p>
+                                ${renderFunRating(hack.funRating)}
                                 <p>${hack.summary}</p>
                                 <a href="${hack.link}">Read the Full Review &rarr;</a>
                             </div>
@@ -246,10 +270,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const eventName = document.getElementById('eventName');
                 const eventCounter = document.getElementById('eventCounter');
                 const eventTotal = document.getElementById('eventTotal');
+                const eventFunRating = document.getElementById('eventFunRating');
                 
                 if (eventName) eventName.textContent = hack.name;
                 if (eventCounter) eventCounter.textContent = this.currentIndex + 1;
                 if (eventTotal) eventTotal.textContent = this.hackathons.length;
+                if (eventFunRating) eventFunRating.innerHTML = renderFunRating(hack.funRating);
                 
                 // Update navigation buttons
                 const prevBtn = document.getElementById('prevEvent');

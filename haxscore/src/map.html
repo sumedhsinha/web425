@@ -25,7 +25,6 @@
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li> <!-- This has to be affixed with .. for src pages and reviews -->
                 <li><a href="review-hub.html">Reviews</a></li> <!-- This has to be affixed with nothing for src pages and reviews -->
-                <li><a href="../how/we-rate.html">Our Ways & Methods</a></li>
                 <li><a href="inventory.html">Inventory</a></li>
                 <li><a href="visual.html">Visual Essay</a></li>
                 <li><a href="map.html">Map</a></li>
@@ -58,9 +57,12 @@
         <!-- Map Card Header with Navigation -->
         <div class="map-card-container">
             <div class="map-card-header">
-                <h3 class="map-card-title" id="mapCardTitle">
-                    <span id="eventName">Select an event</span>
-                </h3>
+                <div class="map-card-title-group">
+                    <h3 class="map-card-title" id="mapCardTitle">
+                        <span id="eventName">Select an event</span>
+                    </h3>
+                    <div id="eventFunRating" class="map-card-fun"></div>
+                </div>
                 <div class="map-card-nav">
                     <button id="prevEvent" aria-label="Previous event">←</button>
                     <span class="map-card-counter">
