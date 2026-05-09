@@ -786,6 +786,41 @@ footer:hover .footer-tagline {
     filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.4));
 }
 
+.footer-mini-sitemap {
+    max-width: 980px;
+    margin: 0.5rem auto 0.85rem auto;
+}
+
+.footer-mini-title {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.35rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.footer-mini-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem 0.85rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-mini-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+.footer-mini-links a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
 /* ==========================================================================
    8. Timeline and Map Event Navigation
    ========================================================================== */
