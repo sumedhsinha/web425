@@ -1067,7 +1067,7 @@ footer:hover .footer-tagline {
 
 .methodology-list li:hover {
     padding-left: 2rem;
-    color: var(--accent-color);
+    color: inherit;
 }
 
 /* Custom bullet points using Font Awesome */
@@ -1102,7 +1102,7 @@ footer:hover .footer-tagline {
 
 .star-legend-list li:hover {
     padding-left: 0.5rem;
-    color: var(--accent-color);
+    color: inherit;
 }
 
 .star-legend-list li::before {
