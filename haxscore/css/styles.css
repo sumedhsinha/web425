@@ -366,6 +366,32 @@ body.dark-mode .dark-logo { display: block; }
     transform: scale(1.05);
 }
 
+/* Home page stock thumbnails: fill the frame edge-to-edge. */
+.home-cards .card {
+    padding-top: 0;
+}
+
+.home-cards .card-image {
+    width: calc(100% + 3rem + 4px);
+    aspect-ratio: 16 / 10;
+    height: auto;
+    margin: -2px calc(-1.5rem - 2px) 1rem calc(-1.5rem - 2px);
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.home-cards .card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home-cards .card-link:hover .card-image img {
+    transform: scale(1.04);
+}
+
 .short-card { text-align: center; }
 .short-card h4 { 
     margin-bottom: 0.5rem;

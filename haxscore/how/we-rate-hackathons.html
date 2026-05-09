@@ -4,14 +4,107 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
-	<title>How We Rate Hackathons | HaxScore</title>
+	<title>Hackathon Review Methodology | HaxScore</title>
 	<link rel="stylesheet" href="../css/styles.css">
 	<link id="favicon" rel="icon" type="image/svg+xml" href="../logos/hax_light.svg">
 </head>
 <body>
+
+	<header>
+		<nav>
+			<a href="../index.html" class="site-logo"> 
+				<img src="../logos/hax_light.svg" alt="Haxscore Site Logo" class="logo-img light-logo"> 
+				<img src="../logos/hax_dark.svg" alt="Haxscore Site Logo" class="logo-img dark-logo"> 
+			</a>
+
+			<ul class="nav-links">
+				<li><a href="../index.html">Home</a></li> 
+				<li><a href="../src/review-hub.html">Reviews</a></li> 
+				<li><a href="../how/we-rate.html">Our Ways & Methods</a></li>
+				<li><a href="../src/inventory.html">Inventory</a></li>
+				<li><a href="../src/visual.html">Visual Essay</a></li>
+				<li><a href="../src/map.html">Map</a></li>
+				<li><a href="../src/sketch-hub.html">Sketches</a></li>
+				<li><a href="../src/about.html">About</a></li>
+			</ul>
+
+			<button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
+		</nav>
+	</header>
+
 	<main>
-		<h1>How We Rate Hackathons</h1>
-		<p>This page is coming soon. Content is being prepared.</p>
+		<div class="methodology-container">
+			<header class="review-header">
+				<a href="../how/we-rate.html" style="font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem; display: inline-block;">&larr; Back to Overview</a>
+				<h1>Hackathon Review Methodology</h1>
+				<h2>How We Evaluate Events</h2>
+			</header>
+
+			<section id="v1.0" style="margin-top: 2rem;">
+
+				<div style="display: inline-flex; align-items: center; background-color: var(--nav-btn-hover-bg); color: var(--accent-color); padding: 0.3rem 0.8rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; margin-bottom: 1.5rem; border: 1px solid var(--accent-color);">
+					<i class="fa-solid fa-code-commit" style="margin-right: 6px;"></i> Version 1.0 (Current)
+				</div>
+
+				<p>Hackathons are high-pressure environments where logistics, mentorship, and community quality matter just as much as the venue name. A "good" event on paper can still fail attendees if Wi-Fi is unstable, judging is unclear, or mentorship is inaccessible.</p>
+
+				<p>Because of that, HaxScore reviews events using a multi-category rubric built around real attendee outcomes: can participants learn, build, ship, and leave with momentum?</p>
+
+				<h3>1. Evidence Collection Process</h3>
+				<p>Each hackathon review is based on first-hand attendance plus documented evidence. We collect notes during the event window, verify details post-event, and cross-check organizer claims against what attendees actually experienced.</p>
+
+				<ul class="methodology-list">
+					<li><strong>Primary evidence:</strong> first-hand observations, photos, schedule tracking, and category-by-category field notes.</li>
+					<li><strong>Secondary evidence:</strong> official event pages, Devpost galleries, MLH listings, published schedules, and sponsor announcements.</li>
+					<li><strong>Community signal:</strong> participant sentiment from public channels (e.g., Discord/Slack threads when available), especially for recurring pain points.</li>
+				</ul>
+
+				<h3>2. Core Scoring Categories</h3>
+				<p>Every event receives category ratings on a 5-star scale. These are the same dimensions used in our review sidebar scorecards:</p>
+
+				<ul class="methodology-list">
+					<li><strong>Food & Accommodations:</strong> meal quality/frequency, dietary inclusivity, sleep space practicality, and hydration/snack availability.</li>
+					<li><strong>Hardware & APIs:</strong> availability and quality of hardware checkout, API/documentation support, and sponsor tooling usefulness.</li>
+					<li><strong>Logistics & Venue:</strong> check-in flow, schedule clarity, venue layout, power/outlet access, Wi-Fi reliability, and overnight usability.</li>
+					<li><strong>Mentorship Quality:</strong> mentor availability, technical depth, response times, and usefulness for beginner vs advanced teams.</li>
+					<li><strong>Community & Sponsors:</strong> inclusivity, collaborative culture, sponsor engagement quality, and signal-to-noise ratio of sponsor activity.</li>
+				</ul>
+
+				<h3>3. Overall Rating Model</h3>
+				<p>Category scores are combined into an overall event rating. In v1.0 we use weighted scoring so infrastructure and educational value have stronger influence than "hype" factors.</p>
+
+				<ul class="methodology-list">
+					<li><strong>Logistics & Venue:</strong> 25%</li>
+					<li><strong>Mentorship Quality:</strong> 25%</li>
+					<li><strong>Hardware & APIs:</strong> 20%</li>
+					<li><strong>Community & Sponsors:</strong> 20%</li>
+					<li><strong>Food & Accommodations:</strong> 10%</li>
+				</ul>
+
+				<p>Weights may evolve in later versions, but all methodology changes are versioned on this page and applied only to future reviews unless explicitly restated.</p>
+
+				<h3>4. Fairness, Transparency, and Bias Controls</h3>
+				<ul class="methodology-list">
+					<li><strong>No paid rankings:</strong> sponsorships and organizer relationships do not influence scores.</li>
+					<li><strong>Disclosure policy:</strong> if travel, lodging, or registration is subsidized, it is disclosed in the review.</li>
+					<li><strong>Evidence threshold:</strong> strong claims require direct observation or verifiable public evidence.</li>
+					<li><strong>No recency inflation:</strong> one great keynote or flashy demo cannot outweigh systemic issues like poor Wi-Fi or unclear judging.</li>
+				</ul>
+
+				<h3>5. Interpreting the Star Scale</h3>
+				<ul class="methodology-list">
+					<li><strong>5.0:</strong> Category-leading execution; exceptional for most participants.</li>
+					<li><strong>4.0 - 4.5:</strong> Strong event with minor operational gaps.</li>
+					<li><strong>3.0 - 3.5:</strong> Mixed experience; workable but notable friction points.</li>
+					<li><strong>2.0 - 2.5:</strong> Repeated issues likely to hinder learning/shipping outcomes.</li>
+					<li><strong>Below 2.0:</strong> Significant organizational failures requiring major improvement.</li>
+				</ul>
+
+				<h3>6. Versioning and Update Policy</h3>
+				<p>Methodology versions are tagged (v1.0, v1.1, etc.) and linked from each review sidebar. If we revise criteria, the new version is published here before it is used in future reviews.</p>
+
+			</section>
+		</div>
 	</main>
 
 	<footer>
@@ -29,7 +122,7 @@
 			<li><a href="#">Privacy (Coming Soon)</a></li>
 		</ul>
 	</div>
-		<img src="../logos/line.png" alt="STRIVE FOR THE CHALLENGE" class="footer-tagline">
+		<img src="../logos/line.png" alt="STRIVE FOR THE CHALLENGE tagline" class="footer-tagline">
 		<div class="social-icons">
 			<a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
 			<a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
