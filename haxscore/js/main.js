@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
                 location: "College Ave Student Center, New Brunswick, NJ",
                 summary: "The first ever hackathon for our founder during his freshmen year. Exciting experience! <cite>Reviewed Feb 2023</cite>",
-                link: "../reviews/hackru-2023.html",
+                link: "../reviews/hackru-spring-2023.html",
                 image: "../images/merch/IMG_7031.jpeg"
             },
             {
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
                 location: "Busch Student Center, Piscataway, NJ",
                 summary: "Good venue, though the judging criteria was a bit vague. <cite>Reviewed Feb 2024</cite>",
-                link: "../reviews/hackru-2024.html",
+                link: "../reviews/hackru-spring-2024.html",
                 image: "../images/travel/IMG_2081.jpeg"
             },
             {
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
                 location: "Livingston Student Center, Piscataway, NJ",
                 summary: "Small event but learnt a lot. <cite>Reviewed Feb 2026</cite>",
-                link: "../reviews/uhaccs-2026.html",
+                link: "../reviews/uhax-2026.html",
                 image: "../images/yhack-2026/IMG_2086.jpeg"
             },
             {
