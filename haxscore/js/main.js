@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
                 location: "College Ave Student Center, New Brunswick, NJ",
                 summary: "The first ever hackathon for our founder during his freshmen year. Exciting experience! <cite>Reviewed Feb 2023</cite>",
-                link: "reviews/hackru-2023.html",
+                link: "../reviews/hackru-2023.html",
                 image: "../images/merch/IMG_7031.jpeg"
             },
             {
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
                 location: "Busch Student Center, Piscataway, NJ",
                 summary: "Good venue, though the judging criteria was a bit vague. <cite>Reviewed Feb 2024</cite>",
-                link: "reviews/hackru-2024.html",
+                link: "../reviews/hackru-2024.html",
                 image: "../images/travel/IMG_2081.jpeg"
             },
             {
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Rutgers Health",
                 location: "RWJ University Hospital, New Brunswick, NJ",
                 summary: "Focused on healthcare innovation, with great industry mentors. Won $750! <cite>Reviewed Dec 2024</cite>",
-                link: "reviews/healthhack-2024.html",
+                link: "../reviews/healthhack-2024.html",
                 image: "../images/healthhack-2024/IMG_7032.jpeg"
             },
 
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Rutgers Data Science Club x Rutgers University",
                 location: "Busch Student Center, Piscataway, NJ",
                 summary: "This event was organized by Rutgers Data Science Club in collaboration with some other clubs and a sponsor",
-                link: "reviews/nda.html",
+                link: "../reviews/nda.html",
                 image: "../images/travel/IMG_2207.jpeg"
             },
 
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "NexHacks x Carnegie Mellon University",
                 location: "Jared L Cohon Hall, Pittsburgh, PA",
                 summary: "The inaugural edition of NexHacks at CMU. Exciting to see how this new hackathon evolves! <cite>Reviewed Apr 2026</cite>",
-                link: "reviews/nexhacks-2026.html",
+                link: "../reviews/nexhacks-2026.html",
                 image: "../images/nexhacks-2026/IMG_1341.jpeg"
             },
             {
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
                 location: "Livingston Student Center, Piscataway, NJ",
                 summary: "Small event but learnt a lot. <cite>Reviewed Feb 2026</cite>",
-                link: "reviews/uhaccs-2026.html",
+                link: "../reviews/uhaccs-2026.html",
                 image: "../images/yhack-2026/IMG_2086.jpeg"
             },
             {
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Yale University",
                 location: "OC Marsh Hall, New Haven, CT",
                 summary: "Secured a DOUBLE WIN, 2 awards totalling more than $2,000!! A very fruitful experience! <cite>Reviewed Apr 2026</cite>",
-                link: "reviews/yhack-2026.html",
+                link: "../reviews/yhack-2026.html",
                 image: "../images/yhack-2026/IMG_2090.jpeg"
             }
         ];
