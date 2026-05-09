@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- get icons in scope -->
+    <script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
+    <title>Sketches | HaxScore</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- This has to be affixed with .. for src pages and reviews -->
+    <link id="favicon" rel="icon" type="image/svg+xml" href="../logos/hax_light.svg">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+
+            <a href="../index.html" class="site-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="../logos/hax_light.svg" alt="Haxscore Site Logo" class="logo-img light-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="../logos/hax_dark.svg" alt="Haxscore Site Logo" class="logo-img dark-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li> <!-- This has to be affixed with .. for src pages and reviews -->
+                <li><a href="review-hub.html">Reviews</a></li> <!-- This has to be affixed with nothing for src pages and reviews -->
+                <li><a href="../how/we-rate.html">Our Ways & Methods</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="visual.html">Visual Essay</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="sketch-hub.html">Sketches</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
+
+        </nav>
+    </header>
+
+    <main>
+        <h1>In-Class Work</h1>
+        <p>A collection of concepts designed during lecture.</p>
+
+        <div class="album-category">
+            <div class="gallery-grid">
+                
+                <figure class="gallery-item">
+                    <img src="../sketches/april_1_2026.jpeg" alt="April 1, 2026 Sketch">
+                    <figcaption>April 1, 2026</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../sketches/april_8_2026.jpeg" alt="April 8, 2026 Sketch">
+                    <figcaption>April 8, 2026</figcaption>
+                </figure>
+
+                </div>
+        </div>
+        
+    </main>
+
+    <footer>
+            <img src="../logos/line.png" alt="STRIVE FOR THE CHALLENGE tagline" class="footer-tagline"> <!-- This has to be affixed with .. for src pages and reviews -->
+
+
+            <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+            </div>
+
+
+            <p>Created by Sumedh Sinha | Web 425 | sumedh.sinha@rutgers.edu | &copy; 2026 Sumedh Sinha. All rights reserved.</p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+            <div class="modal-counter" id="modalCounter"></div>
+            <div class="modal-nav">
+                <button id="prevBtn">← Previous</button>
+                <button id="nextBtn">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/main.js"></script> <!-- This has to be affixed with .. for src pages and reviews -->
+
+</body>
+</html>

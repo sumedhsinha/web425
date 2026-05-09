@@ -269,7 +269,7 @@ body.dark-mode .dark-logo { display: block; }
    5. Cards, Map, Gallery
    ========================================================================== */
 #map {
-    height: 760px;
+    height: 600px;
     width: 100%;
     border-radius: 12px;
     border: 2px solid var(--border-color);
@@ -372,22 +372,6 @@ body.dark-mode .dark-logo { display: block; }
     color: var(--accent-color);
 }
 .short-card p { font-size: 0.85rem; margin-bottom: 0.5rem; }
-
-.map-popup-image-frame {
-    width: 100%;
-    height: 96px;
-    margin: 0.5rem 0 0.75rem;
-    overflow: hidden;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-}
-
-.map-popup-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
 
 .long-card .card-meta { 
     font-size: 0.85rem; 
@@ -916,10 +900,6 @@ footer:hover .footer-tagline {
     .review-grid {
         grid-template-columns: 1fr;
     }
-
-    #map {
-        height: 680px;
-    }
     
     .map-card-header {
         flex-direction: column;
@@ -928,10 +908,6 @@ footer:hover .footer-tagline {
 }
 
 @media (max-width: 600px) {
-    #map {
-        height: 560px;
-    }
-
     .timeline-events {
         gap: 0.3rem;
     }
@@ -1117,7 +1093,6 @@ h1, h2, h3, h4 {
     width: 100%;
     max-width: 900px;
     height: auto;
-    max-height: 300px;
     display: block;
     margin: 0 auto;
     border-radius: 12px;

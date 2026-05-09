@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- get icons in scope -->
+    <script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
+    <title>About | HaxScore</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- This has to be affixed with .. for src pages and reviews -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link id="favicon" rel="icon" type="image/svg+xml" href="../logos/hax_light.svg">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+
+            <a href="../index.html" class="site-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="../logos/hax_light.svg" alt="Haxscore Site Logo" class="logo-img light-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="../logos/hax_dark.svg" alt="Haxscore Site Logo" class="logo-img dark-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li> <!-- This has to be affixed with .. for src pages and reviews -->
+                <li><a href="review-hub.html">Reviews</a></li> <!-- This has to be affixed with nothing for src pages and reviews -->
+                <li><a href="../how/we-rate.html">Our Ways & Methods</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="visual.html">Visual Essay</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="sketch-hub.html">Sketches</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <h1>About HaxScore</h1>
+            <p class="lead-text">Exploring hackathons and gear since 2023. A passionate team dedicated to providing authentic, detailed reviews and insights into the world of competitive programming events and cutting-edge technology.</p>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="mission-section">
+            <div class="mission-grid">
+                <article class="mission-card">
+                    <h3><i class="fa-solid fa-bullseye"></i> Our Mission</h3>
+                    <p>To create a comprehensive resource for evaluating hackathons and gear through rigorous testing, honest feedback, and community collaboration. We believe in transparency and detailed analysis.</p>
+                </article>
+                <article class="mission-card">
+                    <h3><i class="fa-solid fa-sparkles"></i> Our Vision</h3>
+                    <p>Build a trusted platform where participants can make informed decisions about which hackathons to attend and what equipment will best serve their needs in competitive environments.</p>
+                </article>
+                <article class="mission-card">
+                    <h3><i class="fa-solid fa-handshake"></i> Our Values</h3>
+                    <p>Integrity in every review, inclusivity in our community, and a commitment to helping others succeed. We stand by our ratings and methodology.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <h2>Meet the Team</h2>
+            <p class="section-intro">The talented people behind HaxScore, working to bring you the best reviews and insights.</p>
+            
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <article class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="https://sumedhsinha.github.io/files/cropped_pic.png" alt="Sumedh Sinha - Founder & Lead Reviewer" class="team-image">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Sumedh</h3>
+                        <p class="team-role">Founder & Lead Reviewer</p>
+                        <p class="team-bio">Computer Science student at Rutgers University with a passion for hackathons and tech. Sumedh has attended 8+ hackathons and tested dozens of gear setups. He leads the review methodology and standards.</p>
+                        <div class="team-tags">
+                            <span class="tag">Hackathon Enthusiast</span>
+                            <span class="tag">Tech Reviewer</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Team Member 2 -->
+                <article class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="../images/profile/Alex.jpeg" alt="Alex - Gear Specialist" class="team-image">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Alex</h3>
+                        <p class="team-role">Gear Specialist</p>
+                        <p class="team-bio">Former software engineer turned hardware enthusiast. Alex brings deep technical expertise in evaluating audio equipment, laptops, and productivity tools. They've tested over 50 different products for HaxScore.</p>
+                        <div class="team-tags">
+                            <span class="tag">Hardware Expert</span>
+                            <span class="tag">Audio Enthusiast</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Team Member 3 -->
+                <article class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="../images/profile/Maya.jpeg" alt="Maya - Community Manager" class="team-image">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Maya</h3>
+                        <p class="team-role">Community Manager & Event Scout</p>
+                        <p class="team-bio">Marketing and Communications specialist who keeps HaxScore connected with the community. Maya travels to hackathons, conducts interviews, and gathers real-world feedback from participants to inform our reviews.</p>
+                        <div class="team-tags">
+                            <span class="tag">Community Builder</span>
+                            <span class="tag">Event Scout</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Team Member 4 -->
+                <article class="team-card">
+                    <div class="team-image-wrapper">
+                        <img src="../images/profile/Jordan.jpeg" alt="Jordan - Data Analyst" class="team-image">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Jordan</h3>
+                        <p class="team-role">Data Analyst & Visualization Lead</p>
+                        <p class="team-bio">Data scientist who transforms our review data into clear, actionable insights. Jordan develops the scoring algorithms and creates the interactive maps and comparisons that help visitors make better decisions.</p>
+                        <div class="team-tags">
+                            <span class="tag">Data Science</span>
+                            <span class="tag">Visualization</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section">
+            <h2>Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <p><strong>Founded</strong> - HaxScore launches with reviews of 3 hackathons and initial gear evaluations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2024</h3>
+                        <p><strong>Expansion</strong> - Growing to 15+ hackathon reviews and establishing our comprehensive rating methodology.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2025</h3>
+                        <p><strong>Community Growth</strong> - Reaching thousands of visitors and forming partnerships with hackathon organizers.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2026</h3>
+                        <p><strong>Current</strong> - Continuously evolving with interactive maps, detailed comparisons, and deeper community engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <h2>By the Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Hackathons Reviewed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">80+</div>
+                    <div class="stat-label">Gear Products Tested</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">50k+</div>
+                    <div class="stat-label">Annual Visitors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Honest Reviews</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+            <img src="../logos/line.png" alt="STRIVE FOR THE CHALLENGE tagline" class="footer-tagline"> <!-- This has to be affixed with .. for src pages and reviews -->
+
+
+            <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+            </div>
+
+
+            <p>Created by Sumedh Sinha | Web 425 | sumedh.sinha@rutgers.edu | &copy; 2026 Sumedh Sinha. All rights reserved.</p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+            <div class="modal-counter" id="modalCounter"></div>
+            <div class="modal-nav">
+                <button id="prevBtn">← Previous</button>
+                <button id="nextBtn">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/main.js"></script> <!-- This has to be affixed with .. for src pages and reviews -->
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- get icons in scope -->
+    <script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
+    <title>Review Hub | HaxScore</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- This has to be affixed with .. for src pages and reviews -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link id="favicon" rel="icon" type="image/svg+xml" href="../logos/hax_light.svg">
+
+</head>
+
+
+<body>
+
+    <header>
+        <nav>
+
+            <a href="../index.html" class="site-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="../logos/hax_light.svg" alt="Haxscore Site Logo" class="logo-img light-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="../logos/hax_dark.svg" alt="Haxscore Site Logo" class="logo-img dark-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li> <!-- This has to be affixed with .. for src pages and reviews -->
+                <li><a href="review-hub.html">Reviews</a></li> <!-- This has to be affixed with nothing for src pages and reviews -->
+                <li><a href="../how/we-rate.html">Our Ways & Methods</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="visual.html">Visual Essay</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="sketch-hub.html">Sketches</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
+
+        </nav>
+    </header>
+
+    <main>
+        <h1><i class="fa-solid fa-arrows-to-circle"></i> Welcome to the Review Hub</h1>
+        <h2>Comprehensive analysis of collegiate hackathons</h2>
+
+        <div class="grid-layout">
+            <article class="card long-card">
+                <h3>YHack 2026</h3>
+                <span class="card-meta">New Haven, CT | Reviewed Apr 3, 2026</span>
+                <p>A deep dive into the organizational structure of YHack. We look at the event sponsors, the food on offer, and the sleeping arrangements (or lack thereof).</p>
+                <a href="../reviews/yhack-2026.html" class="read-more">"Coming Soon"</a>
+            </article>
+
+            <article class="card long-card">
+                <h3>UHACCS - Spring 2026</h3>
+                <span class="card-meta">Piscataway, NJ | Reviewed Feb XX, 20XX</span>
+                <p>A smaller, intimate hackathon organized by USACS at Livingston Student Center.</p>
+                <a href="../reviews/uhax-2026.html" class="read-more">"Coming Soon"</a>
+            </article>
+
+            <article class="card long-card">
+                <h3>NexHacks 2026</h3>
+                <span class="card-meta">Pittsburgh, PA | Reviewed Apr 5, 2026</span>
+                <p>The inaugural edition of NexHacks at CMU. We review the event structure, the quality of the hackathon experience, and the overall atmosphere in a very chilly Pittsburgh.</p>
+                <a href="../reviews/nexhacks-2026.html" class="read-more">"Coming Soon"</a>
+            </article>
+
+            <!-- <article class="card long-card">
+                <h3>Rutgers Datathon 2025</h3>
+                <span class="card-meta">Piscataway, NJ | Reviewed February 2025</span>
+                <p>The Rutgers Data Science Club's flagship datathon event. Explore the focus on data-driven problem solving and collaborative team dynamics.</p>
+                <a href="../reviews/nda.html" class="read-more">Read Full Review</a>
+            </article> -->
+
+            <article class="card long-card">
+                <h3>HealthHack 2024</h3>
+                <span class="card-meta">New Brunswick, NJ | Reviewed Dec XX, 20XX</span>
+                <p>A healthcare-focused hackathon organized by Rutgers Health. Discover the specialized mentorship, industry connections, and innovation in medical technology.</p>
+                <a href="../reviews/healthhack-2024.html" class="read-more">"Coming Soon"</a>
+            </article>
+
+            <article class="card long-card">
+                <h3>HackRU - Spring 2024</h3>
+                <span class="card-meta">Piscataway, NJ | Reviewed Feb XX, 2024</span>
+                <p>HackRU returns to Busch Student Center with bigger ambitions than ever before. We analyze the improvements made, judging clarity, and overall event execution.</p>
+                <a href="../reviews/hackru-spring-2024.html" class="read-more">"Coming Soon"</a>
+            </article>
+
+            <article class="card long-card">
+                <h3>HackRU - Spring 2023</h3>
+                <span class="card-meta">New Brunswick, NJ | Reviewed Apr XX, 20XX</span>
+                <p>--this is not a real article yet--</p>
+                <p>What was my first ever hackathon experience like? Browse through the biggest learning moments & misses. </p>
+                <a href="../reviews/hackru-spring-2023.html" class="read-more">"Coming Soon"</a>
+            </article>
+            
+        </div>
+
+
+
+        <h2>Gear Reviews</h2>
+
+        <div class="grid-layout">
+            <article class="card long-card">
+                <h3>Sony WH1000-XM4 Noise Canceling Headphones</h3>
+                <span class="card-meta">$349.99 | Reviewed Mar 25, 2026</span>
+                <p>These headphones offer excellent noise cancellation and sound quality, making them ideal for use during long hackathon sessions.</p>
+                <a href="../reviews/sony-xm4.html" class="read-more">Read Full Review</a>
+                <!-- <a href="../../exper/reviews.html" class="read-more">Read Full Review</a> -->
+            </article>
+
+            <article class="card long-card">
+                <h3>Apple MacBook Pro M4 (2024)</h3>
+                <span class="card-meta">$1599.99 - $7249.99 | Reviewed Mar 25, 2026</span>
+                <p>The latest iteration of the MacBook Pro delivers exceptional performance and build quality, making it a top choice for developers.</p>
+                <a href="../reviews/apple-mbp-2024.html" class="read-more">Read Full Review</a>
+                <!-- <a href="../../exper/reviews.html" class="read-more">Read Full Review</a> -->
+            </article>   
+            
+            <article class="card long-card">
+                <h3>OE Electronics QikPack Carry Portable Battery Pack</h3>
+                <span class="card-meta">$XXX.XX | Reviewed Mar XX, 20XX</span>
+                <p>--this is not a real article yet--</p>
+                <p>A compact and powerful battery pack with multiple USB-C ports, perfect for keeping devices charged during long hackathon sprints.</p>
+                <a href="../reviews/oe-qikpack.html" class="read-more">"Coming Soon"</a>
+                <!-- mini review -->
+            </article>
+
+            
+
+        </div>
+
+
+
+    </main>
+
+
+    <footer>
+            <img src="../logos/line.png" alt="STRIVE FOR THE CHALLENGE tagline" class="footer-tagline"> <!-- This has to be affixed with .. for src pages and reviews -->
+
+
+            <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+            </div>
+
+
+            <p>Created by Sumedh Sinha | Web 425 | sumedh.sinha@rutgers.edu | &copy; 2026 Sumedh Sinha. All rights reserved.</p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+            <div class="modal-counter" id="modalCounter"></div>
+            <div class="modal-nav">
+                <button id="prevBtn">← Previous</button>
+                <button id="nextBtn">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/main.js"></script> <!-- This has to be affixed with .. for src pages and reviews -->
+
+</body>
+</html>

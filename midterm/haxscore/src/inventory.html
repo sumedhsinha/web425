@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- get icons in scope -->
+    <script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
+    <title>Inventory | HaxScore</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- This has to be affixed with .. for src pages and reviews -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link id="favicon" rel="icon" type="image/svg+xml" href="../logos/hax_light.svg">
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+
+            <a href="../index.html" class="site-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="../logos/hax_light.svg" alt="Haxscore Site Logo" class="logo-img light-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="../logos/hax_dark.svg" alt="Haxscore Site Logo" class="logo-img dark-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li> <!-- This has to be affixed with .. for src pages and reviews -->
+                <li><a href="review-hub.html">Reviews</a></li> <!-- This has to be affixed with nothing for src pages and reviews -->
+                <li><a href="../how/we-rate.html">Our Ways & Methods</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="visual.html">Visual Essay</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="sketch-hub.html">Sketches</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
+
+        </nav>
+    </header>
+
+    <main>
+        <h1>Photo Gallery</h1>
+
+        <section class="intro-preface">
+            <h2>Relive Hackathons As We Saw Them</h2>
+            <p>
+                This inventory page serves as a visual archive that captures the material and experiential reality of hackathons. These events often receive coverage for their intellectual output (projects, code, innovations) but rarely for their tangible lived experience. While reviews on HaxScore focus on evaluating individual hackathon events across quality dimensions like organization, venue, and culture, this page takes a different approach: it documents the <em>artifacts and environments</em> that constitute a hackathon experience.
+            </p>
+            <p>
+                The images collected here represent years of attendance at major hackathons on the US East Coast, from Yale's premier YHack to Carnegie Mellon's NexHacks and other significant events. I've chosen to preserve and showcase four categories of content: event merchandise and swag, venue and gathering space photography, the specialized gear that makes participation possible, and the travel infrastructure that connects these geographically dispersed events. These categories were selected because they reveal what hackathons are <em>for</em> and what they <em>require</em> capturing elements that bridge the gap between event marketing materials and actual participant experience.
+            </p>
+            <p>
+                I hope that with this page, you'll develop a richer understanding of hackathon culture beyond simply marketing, statistics or rankings. You'll see how different institutions manifest their identities through event design and merchandise, observe the spatial dynamics of collaborative work, recognize the tools and technologies that hackers depend on, and understand the logistics and travel that hackathon participation demands. 
+        </section>
+
+        <p>Each image is accompanied by a description and attribution, providing context and credit where due. </p><p><strong>You can expand each image to view it in a larger individual frame, simply click on the image.</strong></p>
+        
+        <!-- Gallery Structure : All images use <figure> + <figcaption> wrapped in gallery-item class for consistent modal viewer compatibility
+            adding a new image : 
+             1. Add <figure class="gallery-item">
+             2. Add <img src="path/to/image.jpg" alt="Descriptive text">
+             3. Add <figcaption>Description<cite>Author (Date)</cite></figcaption>
+             4. Close with </figure>
+            Note to self : Use "gallery-item no-square" class if image has non-square aspect ratio
+        -->
+
+        <section class="album-category">
+            <h2>Merch from events across the years</h2>
+            <p>I'm always excited to see the merch provided by the organizers at these events. It offers a tangible connection to the hackathon experience and reflects the unique identity of each event.</p>
+            <div class="gallery-grid inventory-grid">
+                <figure class="gallery-item">
+                    <img src="../images/merch/IMG_1299.jpeg" alt="NexHacks - Hoodie and Nametag">
+                    <figcaption>NexHacks 2026 Merch - Hoodie and Nametag<cite>Sumedh Sinha (January 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/merch/IMG_2818.jpeg" alt="YHack 2026 Merch - TShirts">
+                    <figcaption>YHack 2026 Merch - TShirts<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/merch/IMG_7031.jpeg" alt="HealthHack 2024 Merch">
+                    <figcaption>HealthHack 2024 Merch - TShirt and Nametag<cite>Sumedh Sinha (October 2024)</cite></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="album-category">
+            <h2>YHack 2026 Event Pictures</h2>
+            <p>Definitely one of the best events I've attended. Lots of memorable moments and inspiring talks.</p>
+            <div class="gallery-grid inventory-grid">
+                <figure class="gallery-item">
+                    <img src="../images/yhack-2026/IMG_2086.jpeg" alt="Yale University - looking down Hillhouse Ave">
+                    <figcaption>Looking up on Hillhouse Ave to Kline Tower. Wonderful view.<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/yhack-2026/IMG_2090.jpeg" alt="Yale University - The Steep">
+                    <figcaption>The Steep. Stunning Building!<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/yhack-2026/IMG_2092.jpeg" alt="YHack 2026 - Opening Ceremony - Intro Slide">
+                    <figcaption>The Intro Slide for the Opening Ceremony at YHack 2026. People were eager to begin since the ceremony did run overtime, and organizers ultimately did not provide extra time.<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+
+                <!-- <figure class="gallery-item">
+                    <img src="../images/yhack-2026/IMG_2120.jpeg" alt="IMG_2120">
+                    <figcaption>IMG_2120<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure> -->
+
+                <figure class="gallery-item">
+                    <img src="../images/yhack-2026/IMG_2140.jpeg" alt="Feastables Sponsor Swag/Snack">
+                    <figcaption>Feastables Sponsor Swag/Snack. Yum!<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/yhack-2026/IMG_2159.jpeg" alt="YHack 2026 - Closing Ceremony - Talk by Prof Po-Shen Loh">
+                    <figcaption>Prof Po-Shen Loh (Professor of Math at CMU and former US IMO coach) gave a very inspiring talk at the closing ceremony.<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/yhack-2026/IMG_2173.jpeg" alt="View from the top showcasing a part of the Yale Campus, the golden Chase Office Building is in the background">
+                    <figcaption>View from uptop, opposite Schwarzman Center<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+            </div>
+        </section>
+
+
+
+        <section class="album-category">
+            <h2>NexHacks 2026 Event Pictures</h2>
+            <p>It was pretty cool to be part of the inaugural editon of NexHacks. Many people flew in from Canada (Waterloo, Toronto, etc.) and other parts of the US to participate. There were a ton of snacks and activities to keep everyone energized and engaged throughout the event. It was super cold outside due to the recent snow storm.</p>
+            <div class="gallery-grid inventory-grid">
+
+                <figure class="gallery-item">
+                    <img src="../images/nexhacks-2026/IMG_1300.jpeg" alt="A picture showing various desks with scattered laptops and people working">
+                    <figcaption>Jared L Cohon Hall - view of various desks and groups<cite>Sumedh Sinha (January 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/nexhacks-2026/IMG_1321.jpeg" alt="CMU Campus during a particularly chilly night (3 am)">
+                    <figcaption>CMU Campus during a particularly chilly night (3 am)<cite>Sumedh Sinha (January 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/nexhacks-2026/IMG_1341.jpeg" alt="The majestic Carnegie Music Hall in Pittsburgh">
+                    <figcaption>The majestic Carnegie Music Hall was setup for the closing ceremony<cite>Sumedh Sinha (January 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/nexhacks-2026/IMG_1342.jpeg" alt="A view of the closing ceremony slideshow">
+                    <figcaption>A view of the closing ceremony slideshow<cite>Sumedh Sinha (January 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/nexhacks-2026/IMG_1600.jpeg" alt="A view of a kanban/idea board">
+                    <figcaption>Ideating our project<cite>Sumedh Sinha (January 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/nexhacks-2026/tincan_tower.jpeg" alt="tincan tower">
+                    <figcaption>Tincan Tower of Monster Drinks consumed by our team<cite>Sumedh Sinha (January 2026)</cite></figcaption>
+                </figure>
+            </div>
+        </section>
+
+
+        <section class="album-category">
+            <h2>HealthHack 2024 Event Pictures</h2>
+            <p>This was a rather interesting event because unlike a traditional hackathon, it focused specifically on health-related challenges and solutions. Ideas were centered around improving healthcare accessibility, patient outcomes, and innovative medical technologies.</p>
+            <div class="gallery-grid inventory-grid">
+                <figure class="gallery-item">
+                    <img src="../images/healthhack-2024/IMG_7032.jpeg" alt="Opening Ceremony - slide showing all the different universities represented at HealthHack 2024">
+                    <figcaption>Opening Ceremony - slide showing all the different universities represented at HealthHack 2024<cite>Sumedh Sinha (October 2024)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/healthhack-2024/IMG_7045.jpeg" alt="A picture of the main podium with the stage and the large screen in the background">
+                    <figcaption>A picture of the main podium with the stage and the large screen in the background<cite>Sumedh Sinha (October 2024)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/healthhack-2024/IMG_7046.jpeg" alt="A view of the expansive venue with Walgreens and Starbucks in the background">
+                    <figcaption>A view of the expansive venue with Walgreens and Starbucks in the background<cite>Sumedh Sinha (October 2024)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/healthhack-2024/IMG_7048.jpeg" alt="More than 200 participants were part of the second edition of Rutgers Health Hack hosted in 2024">
+                    <figcaption>More than 200 participants were part of the second edition of Rutgers Health Hack hosted in 2024<cite>Sumedh Sinha (October 2024)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/healthhack-2024/IMG_7049.jpeg" alt="Timeline for the event">
+                    <figcaption>Timeline for the event<cite>Sumedh Sinha (October 2024)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/healthhack-2024/IMG_7051.jpeg" alt="The prizes up for grabs">
+                    <figcaption>The prizes up for grabs<cite>Sumedh Sinha (October 2024)</cite></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="album-category">
+            <h2>Gear Pictures</h2>
+            <p>My essential gadgets for success.</p>
+            <div class="gallery-grid inventory-grid">
+                <figure class="gallery-item">
+                    <img src="../images/mac.jpeg" alt="Macbook Pro 14 inch M4 Pro (2024)">
+                    <figcaption>My trusty Macbook Pro 14 inch M4 Pro, the workhorse behind all my reviews and content creation!<cite>Sumedh Sinha (April 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/xm4.jpeg" alt="Sony WH-1000XM4 headphones">
+                    <figcaption>My Sony WH-1000XM4 headphones, a must-have for focus during hackathons<cite>Sumedh Sinha (April 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/batt-pack.jpeg" alt="OE Electronics QikPack Carry Portable battery pack with multiple USB-C ports">
+                    <figcaption>OE Electronics QikPack Carry Portable battery pack, essential for keeping devices charged during long hackathon sprints where outlets aren't readily available.<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="album-category">
+            <h2>Travel Pictures</h2>
+            <p>Some moments from my travels to hackathons.</p>
+            <div class="gallery-grid inventory-grid">
+                <figure class="gallery-item">
+                    <img src="../images/travel/IMG_2081.jpeg" alt="NYC Grand Central Terminal">
+                    <figcaption>Looking at Grand Central Terminal from Pershing Sq<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/travel/IMG_2084.jpeg" alt="Metro North Train Coach - destination board shows Bridgeport as next stop">
+                    <figcaption>View from inside a Metro North Train going to New Haven<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/travel/IMG_2207.jpeg" alt="A picture of the waiting hall at New Haven Station, CT, USA">
+                    <figcaption>A picture of the waiting hall at New Haven Station, CT, USA<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/travel/IMG_2211.jpeg" alt="The New Haven Station Signboard on the platform">
+                    <figcaption>The New Haven Station Signboard on the platform<cite>Sumedh Sinha (March 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/travel/IMG_1394.jpeg" alt="A shot of a United E175 aircraft parked at Newark Airport (EWR/KEWR) at Terminal C">
+                    <figcaption>A shot of a United E175 aircraft parked at Newark Airport (EWR/KEWR) at Terminal C<cite>Sumedh Sinha (January 2026)</cite></figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="../images/travel/airbnb-pitt-room.jpeg" alt="My room within the Airbnb apartment I stayed at with my teammates during NexHacks 2026 in Pittsburgh, PA">
+                    <figcaption>My room within the Airbnb apartment I stayed at with my teammates during NexHacks 2026 in Pittsburgh, PA<cite>Sumedh Sinha (January 2026)</cite></figcaption>
+                </figure>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+            <img src="../logos/line.png" alt="STRIVE FOR THE CHALLENGE tagline" class="footer-tagline"> <!-- This has to be affixed with .. for src pages and reviews -->
+
+
+            <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+            </div>
+
+
+            <p>Created by Sumedh Sinha | Web 425 | sumedh.sinha@rutgers.edu | &copy; 2026 Sumedh Sinha. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/main.js"></script> <!-- This has to be affixed with .. for src pages and reviews -->
+
+    <!-- Image Modal Viewer -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+            <div class="modal-counter" id="modalCounter"></div>
+            <div class="modal-nav">
+                <button id="prevBtn">← Previous</button>
+                <button id="nextBtn">Next →</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

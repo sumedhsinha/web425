@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- added for accessiblity readers -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- get icons in scope -->
+    <script src="https://kit.fontawesome.com/97ba3ff317.js" crossorigin="anonymous"></script>
+    <title>HaxScore - Your Hub for Hackathon Reviews</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- This has to be affixed with .. for src pages and reviews -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link id="favicon" rel="icon" type="image/svg+xml" href="logos/hax_light.svg">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+
+            <a href="index.html" class="site-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="logos/hax_light.svg" alt="Haxscore Site Logo" class="logo-img light-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            <img src="logos/hax_dark.svg" alt="Haxscore Site Logo" class="logo-img dark-logo"> <!-- This has to be affixed with .. for src pages and reviews -->
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li> <!-- This has to be affixed with .. for src pages and reviews -->
+                <li><a href="src/review-hub.html">Reviews</a></li> <!-- This has to be affixed with nothing for src pages and reviews -->
+                <li><a href="how/we-rate.html">Our Ways & Methods</a></li>
+                <li><a href="src/inventory.html">Inventory</a></li>
+                <li><a href="src/visual.html">Visual Essay</a></li>
+                <li><a href="src/map.html">Map</a></li>
+                <li><a href="src/sketch-hub.html">Sketches</a></li>
+                <li><a href="src/about.html">About</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
+
+        </nav>
+    </header>
+
+
+
+    <main>
+        <h1 class="welcome-title">Your Hub for Hackathon Reviews</h1>
+        
+        <figure class="hero-figure">
+            <img src="images/intro.png" alt="Hero image for HaxScore" class="hero-image">
+            <figcaption>Designed by Sumedh Sinha</figcaption>
+        </figure>
+        
+        <p></p>
+
+        <p>This is a site dedicated to critically exploring the world of hackathons! Here we recap our adventures and share tips for success</p>
+
+        
+        <p></p>
+
+        <div class="grid-layout">
+            <a href="src/review-hub.html" class="card card-link">
+                <div class="card-image">
+                    <img src="images/reviews-thumb.jpg" alt="Hackathon reviews collection">
+                </div>
+                <h3>Hackathon Reviews</h3>
+                <p>Explore in-depth reviews of hackathons from around the world. Discover what makes each event unique and read our detailed critiques.</p>
+            </a>
+
+            <a href="how/we-rate.html" class="card card-link">
+                <div class="card-image">
+                    <img src="images/methodology-thumb.jpg" alt="Our rating methodology">
+                </div>
+                <h3>Our Methods</h3>
+                <p>Learn how we rate hackathons and gear. Understand our evaluation criteria and the thoughtful process behind every review.</p>
+            </a>
+
+            <a href="src/inventory.html" class="card card-link">
+                <div class="card-image">
+                    <img src="images/inventory-thumb.jpg" alt="Inventory of gear and items">
+                </div>
+                <h3>Inventory</h3>
+                <p>Browse our comprehensive inventory of gear, equipment, and items we've tested and reviewed across various categories.</p>
+            </a>
+        </div>
+
+        <p></p>
+
+        <h2 id="site-map"><i class="fa-solid fa-sitemap"></i> Site Map</h2>
+        <p>Here are the links to different sections of this website (simply expand the dropdown lists): </p>
+        <!-- add a site map with links to all existing pages - WIP -->
+        <details>
+            <summary><strong>Articles</strong></summary>
+            <ul>
+                <li><a href="index.html">index.html</a> - Main entry point</li>
+                <li>
+                    <strong>css</strong>
+                    <ul>
+                        <li><a href="css/styles.css">styles.css</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>js</strong>
+                    <ul>
+                        <li><a href="js/main.js">main.js</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>how</strong>
+                    <ul>
+                        <li><a href="how/we-rate-gear.html">we-rate-gear.html</a></li>
+                        <li><a href="how/we-rate-hackathons.html">we-rate-hackathons.html</a></li>
+                        <li><a href="how/we-rate.html">we-rate.html</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>ref</strong>
+                    <ul>
+                        <li><a href="ref/apple-mbp-2024-redone.html">apple-mbp-2024-redone.html</a></li>
+                        <li><a href="ref/gear.html">gear.html</a></li>
+                        <li><a href="ref/hack.html">hack.html</a></li>
+                        <li><a href="ref/page.html">page.html</a></li>
+                        <li><a href="ref/rev-ref.html">rev-ref.html</a></li>
+                        <li><a href="ref/sony-xm4-redone.html">sony-xm4-redone.html</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>reviews</strong>
+                    <ul>
+                        <li><a href="reviews/apple-mbp-2024.html">apple-mbp-2024.html</a></li>
+                        <li><a href="reviews/hackru-spring-2023.html">hackru-spring-2023.html</a></li>
+                        <li><a href="reviews/hackru-spring-2024.html">hackru-spring-2024.html</a></li>
+                        <li><a href="reviews/healthhack-2024.html">healthhack-2024.html</a></li>
+                        <li><a href="reviews/nda.html">nda.html</a></li>
+                        <li><a href="reviews/nexhacks-2026.html">nexhacks-2026.html</a></li>
+                        <li><a href="reviews/oe-qikpack.html">oe-qikpack.html</a></li>
+                        <li><a href="reviews/sony-xm4.html">sony-xm4.html</a></li>
+                        <li><a href="reviews/uhax-2026.html">uhax-2026.html</a></li>
+                        <li><a href="reviews/yhack-2026.html">yhack-2026.html</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>src</strong>
+                    <ul>
+                        <li><a href="src/about.html">about.html</a></li>
+                        <li><a href="src/inventory.html">inventory.html</a></li>
+                        <li><a href="src/map.html">map.html</a></li>
+                        <li><a href="src/review-hub.html">review-hub.html</a></li>
+                        <li><a href="src/sketch-hub.html">sketch-hub.html</a></li>
+                        <li><a href="src/visual.html">visual.html</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </details>
+        <details>
+            <summary><strong>Assets</strong></summary>
+            <ul>
+                <li>
+                    <strong>images</strong>
+                    <ul>
+                        <li><a href="images/batt-pack.jpeg">batt-pack.jpeg</a></li>
+                        <li><a href="images/mac.jpeg">mac.jpeg</a></li>
+                        <li><a href="images/xm4.jpeg">xm4.jpeg</a></li>
+                        <li>
+                            <strong>healthhack-2024</strong>
+                            <ul>
+                                <li><a href="images/healthhack-2024/IMG_7032.jpeg">IMG_7032.jpeg</a></li>
+                                <li><a href="images/healthhack-2024/IMG_7045.jpeg">IMG_7045.jpeg</a></li>
+                                <li><a href="images/healthhack-2024/IMG_7046.jpeg">IMG_7046.jpeg</a></li>
+                                <li><a href="images/healthhack-2024/IMG_7048.jpeg">IMG_7048.jpeg</a></li>
+                                <li><a href="images/healthhack-2024/IMG_7049.jpeg">IMG_7049.jpeg</a></li>
+                                <li><a href="images/healthhack-2024/IMG_7051.jpeg">IMG_7051.jpeg</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>merch</strong>
+                            <ul>
+                                <li><a href="images/merch/IMG_1299.jpeg">IMG_1299.jpeg</a></li>
+                                <li><a href="images/merch/IMG_2818.jpeg">IMG_2818.jpeg</a></li>
+                                <li><a href="images/merch/IMG_7031.jpeg">IMG_7031.jpeg</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>nexhacks-2026</strong>
+                            <ul>
+                                <li><a href="images/nexhacks-2026/IMG_1279.jpeg">IMG_1279.jpeg</a></li>
+                                <li><a href="images/nexhacks-2026/IMG_1300.jpeg">IMG_1300.jpeg</a></li>
+                                <li><a href="images/nexhacks-2026/IMG_1321.jpeg">IMG_1321.jpeg</a></li>
+                                <li><a href="images/nexhacks-2026/IMG_1341.jpeg">IMG_1341.jpeg</a></li>
+                                <li><a href="images/nexhacks-2026/IMG_1342.jpeg">IMG_1342.jpeg</a></li>
+                                <li><a href="images/nexhacks-2026/IMG_1600.jpeg">IMG_1600.jpeg</a></li>
+                                <li><a href="images/nexhacks-2026/tincan_tower.jpeg">tincan_tower.jpeg</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>profile</strong>
+                            <ul>
+                                <li><a href="images/profile/Alex.jpeg">Alex.jpeg</a></li>
+                                <li><a href="images/profile/Jordan.jpeg">Jordan.jpeg</a></li>
+                                <li><a href="images/profile/Maya.jpeg">Maya.jpeg</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>travel</strong>
+                            <ul>
+                                <li><a href="images/travel/IMG_1394.jpeg">IMG_1394.jpeg</a></li>
+                                <li><a href="images/travel/IMG_2081.jpeg">IMG_2081.jpeg</a></li>
+                                <li><a href="images/travel/IMG_2084.jpeg">IMG_2084.jpeg</a></li>
+                                <li><a href="images/travel/IMG_2207.jpeg">IMG_2207.jpeg</a></li>
+                                <li><a href="images/travel/IMG_2211.jpeg">IMG_2211.jpeg</a></li>
+                                <li><a href="images/travel/airbnb-pitt-room.jpeg">airbnb-pitt-room.jpeg</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>yhack-2026</strong>
+                            <ul>
+                                <li><a href="images/yhack-2026/IMG_2086.jpeg">IMG_2086.jpeg</a></li>
+                                <li><a href="images/yhack-2026/IMG_2090.jpeg">IMG_2090.jpeg</a></li>
+                                <li><a href="images/yhack-2026/IMG_2092.jpeg">IMG_2092.jpeg</a></li>
+                                <li><a href="images/yhack-2026/IMG_2120.jpeg">IMG_2120.jpeg</a></li>
+                                <li><a href="images/yhack-2026/IMG_2140.jpeg">IMG_2140.jpeg</a></li>
+                                <li><a href="images/yhack-2026/IMG_2159.jpeg">IMG_2159.jpeg</a></li>
+                                <li><a href="images/yhack-2026/IMG_2173.jpeg">IMG_2173.jpeg</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>logos</strong>
+                    <ul>
+                        <li><a href="logos/hax_dark.svg">hax_dark.svg</a></li>
+                        <li><a href="logos/hax_light.svg">hax_light.svg</a></li>
+                        <li><a href="logos/line.png">line.png</a></li>
+                        <li>
+                            <strong>old</strong>
+                            <ul>
+                                <li><a href="logos/old/HaxScore.svg">HaxScore.svg</a></li>
+                                <li><a href="logos/old/hax.svg">hax.svg</a></li>
+                                <li><a href="logos/old/hax_light_old.svg">hax_light_old.svg</a></li>
+                                <li><a href="logos/old/haxscore_logo.svg">haxscore_logo.svg</a></li>
+                                <li><a href="logos/old/lineold.png">lineold.png</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>sketches</strong>
+                    <ul>
+                        <li><a href="sketches/april_1_2026.jpeg">april_1_2026.jpeg</a></li>
+                        <li><a href="sketches/april_8_2026.jpeg">april_8_2026.jpeg</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </details>
+
+    <hr>
+        <p></p>
+        <p><b>DISCLAIMER</b>: This website is for educational purposes only, and created as part of my coursework for Rutgers University - Web Authoring 425 (Professor Bass) during Spring 2026. The views expressed here do not necessarily reflect the official position of any organization.</p>
+    <hr>
+    
+    </main>
+
+    
+
+    
+    <footer>
+            <img src="logos/line.png" alt="STRIVE FOR THE CHALLENGE tagline" class="footer-tagline"> <!-- This has to be affixed with .. for src pages and reviews -->
+
+
+            <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter"></i> 
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+            </div>
+
+
+            <p>Created by Sumedh Sinha | Web 425 | sumedh.sinha@rutgers.edu | &copy; 2026 Sumedh Sinha. All rights reserved.</p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+            <div class="modal-counter" id="modalCounter"></div>
+            <div class="modal-nav">
+                <button id="prevBtn">← Previous</button>
+                <button id="nextBtn">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script> <!-- This has to be affixed with .. for src pages and reviews -->
+
+
+
+</body>
+</html>

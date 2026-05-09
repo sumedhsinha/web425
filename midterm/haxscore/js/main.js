@@ -63,9 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (mapElement) {
         // Initialize map centered on New Brunswick / Piscataway, NJ
-        const map = L.map('map', {
-            zoomControl: true
-        }).setView([40.50567186596019, -74.45408580372482], 13);
+        const map = L.map('map').setView([40.50567186596019, -74.45408580372482], 13);
 
         // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -81,8 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
                 location: "College Ave Student Center, New Brunswick, NJ",
                 summary: "The first ever hackathon for our founder during his freshmen year. Exciting experience! <cite>Reviewed Feb 2023</cite>",
-                link: "reviews/hackru-2023.html",
-                image: "../images/merch/IMG_7031.jpeg"
+                link: "reviews/hackru-2023.html"
             },
             {
                 name: "HackRU - Spring 2024",
@@ -91,8 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
                 location: "Busch Student Center, Piscataway, NJ",
                 summary: "Good venue, though the judging criteria was a bit vague. <cite>Reviewed Feb 2024</cite>",
-                link: "reviews/hackru-2024.html",
-                image: "../images/travel/IMG_2081.jpeg"
+                link: "reviews/hackru-2024.html"
             },
             {
                 name: "HealthHack - 2024",
@@ -101,19 +97,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Rutgers Health",
                 location: "RWJ University Hospital, New Brunswick, NJ",
                 summary: "Focused on healthcare innovation, with great industry mentors. Won $750! <cite>Reviewed Dec 2024</cite>",
-                link: "reviews/healthhack-2024.html",
-                image: "../images/healthhack-2024/IMG_7032.jpeg"
+                link: "reviews/healthhack-2024.html"
             },
 
             {
                 name: "Rutgers Datathon - 2025",
                 lat: 40.52342741886011, 
                 lng: -74.4594333645459,
-                org: "Rutgers Data Science Club x Rutgers University",
+                org: "Rutges Data Science Club x Rutgers University",
                 location: "Busch Student Center, Piscataway, NJ",
                 summary: "This event was organized by Rutgers Data Science Club in collaboration with some other clubs and a sponsor",
-                link: "reviews/nda.html",
-                image: "../images/travel/IMG_2207.jpeg"
+                link: "reviews/nda.html"
             },
 
             {
@@ -123,8 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "NexHacks x Carnegie Mellon University",
                 location: "Jared L Cohon Hall, Pittsburgh, PA",
                 summary: "The inaugural edition of NexHacks at CMU. Exciting to see how this new hackathon evolves! <cite>Reviewed Apr 2026</cite>",
-                link: "reviews/nexhacks-2026.html",
-                image: "../images/nexhacks-2026/IMG_1341.jpeg"
+                link: "reviews/nexhacks-2026.html"
             },
             {
                 name: "UHACCS - Spring 2026",
@@ -133,8 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Undergraduate Student Alliance of Computing Scientists (USACS) x Rutgers University",
                 location: "Livingston Student Center, Piscataway, NJ",
                 summary: "Small event but learnt a lot. <cite>Reviewed Feb 2026</cite>",
-                link: "reviews/uhaccs-2026.html",
-                image: "../images/yhack-2026/IMG_2086.jpeg"
+                link: "reviews/uhaccs-2026.html"
             },
             {
                 name: "YHack - 2026",
@@ -143,8 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 org: "Yale University",
                 location: "OC Marsh Hall, New Haven, CT",
                 summary: "Secured a DOUBLE WIN, 2 awards totalling more than $2,000!! A very fruitful experience! <cite>Reviewed Apr 2026</cite>",
-                link: "reviews/yhack-2026.html",
-                image: "../images/yhack-2026/IMG_2090.jpeg"
+                link: "reviews/yhack-2026.html"
             }
         ];
 
@@ -168,9 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         const popupContent = `
                             <div class="short-card">
                                 <h4>${hack.name}</h4>
-                                <div class="map-popup-image-frame">
-                                    <img src="${hack.image || '../images/intro.png'}" alt="Hackathon event image" class="map-popup-image">
-                                </div>
                                 <p class="location-text">${hack.location}</p>
                                 <p class="org">${hack.org}</p>
                                 <p>${hack.summary}</p>
@@ -180,11 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         const marker = L.marker([hack.lat, hack.lng])
                             .addTo(map)
-                            .bindPopup(popupContent, {
-                                maxWidth: 350,
-                                autoPan: false,
-                                autoPanSpeed: 10
-                            });
+                            .bindPopup(popupContent);
                         
                         // Click marker to select event
                         marker.on('click', () => this.selectEvent(index));
@@ -257,14 +241,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Highlight marker and open popup
                 if (this.markers[this.currentIndex]) {
-                    const marker = this.markers[this.currentIndex];
-                    const markerLatLng = marker.getLatLng();
-
-                    // Keep the selected pin in focus by centering first, then opening the popup.
-                    this.map.flyTo(markerLatLng, this.map.getZoom(), { animate: true, duration: 0.35 });
-                    this.map.once('moveend', () => {
-                        marker.openPopup();
-                    });
+                    this.markers[this.currentIndex].openPopup();
+                    this.map.panTo(this.markers[this.currentIndex].getLatLng());
                 }
             }
             
