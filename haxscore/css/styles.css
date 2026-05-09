@@ -1093,6 +1093,7 @@ h1, h2, h3, h4 {
     width: 100%;
     max-width: 900px;
     height: auto;
+    max-height: 300px;
     display: block;
     margin: 0 auto;
     border-radius: 12px;
