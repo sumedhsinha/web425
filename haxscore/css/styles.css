@@ -530,6 +530,10 @@ figcaption {
     transition: color 0.2s ease;
 }
 
+.inventory-grid .gallery-item figcaption {
+    font-style: normal;
+}
+
 .gallery-item:hover figcaption {
     color: var(--accent-color);
 }
@@ -1759,6 +1763,170 @@ details[open] summary {
     z-index: 1;
 }
 
+.about-why {
+    margin: 2rem 0 3rem;
+}
+
+.about-why h2 {
+    text-align: center;
+}
+
+.about-why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.why-card {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+}
+
+.why-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    border: none;
+    padding: 0;
+    font-size: 1.15rem;
+    color: var(--accent-color);
+}
+
+.why-card h3 i {
+    margin-right: 0.4rem;
+}
+
+.why-card p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.hackathon-case {
+    margin: 3rem 0 3.5rem;
+}
+
+.hackathon-case-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin: 1.2rem 0 2rem;
+}
+
+.case-card {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.2rem;
+}
+
+.case-card h3 {
+    margin: 0 0 0.75rem;
+    border: none;
+    padding: 0;
+    color: var(--accent-color);
+    font-size: 1.08rem;
+}
+
+.case-card h3 i {
+    margin-right: 0.35rem;
+}
+
+.case-card p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.65;
+}
+
+.subsection-title {
+    margin: 1.2rem 0 0.55rem;
+    border: none;
+    padding: 0;
+    color: var(--text-color);
+    font-size: 1.25rem;
+}
+
+.hackathon-stages {
+    margin: 0.75rem 0 1.5rem 1.25rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+.hackathon-stages li {
+    margin-bottom: 0.35rem;
+}
+
+.challenge-list-wrap {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.8rem;
+}
+
+.challenge-list {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.challenge-list li {
+    margin-bottom: 0.35rem;
+}
+
+.benchmark-intro {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.benchmark-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.benchmark-card {
+    border-radius: 12px;
+    padding: 1rem 1.1rem;
+    border: 2px solid var(--border-color);
+    background: var(--card-bg);
+}
+
+.benchmark-card h4 {
+    margin: 0 0 0.5rem;
+    color: var(--text-color);
+}
+
+.benchmark-card p {
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.65;
+}
+
+.benchmark-card a {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.benchmark-card a:hover {
+    color: var(--accent-hover);
+}
+
+.benchmark-positive {
+    border-color: #22c55e;
+}
+
+.benchmark-neutral {
+    border-color: #64748b;
+}
+
+.benchmark-negative {
+    border-color: #ef4444;
+}
+
 /* Mission Section */
 .mission-section {
     margin: 3rem 0;
@@ -1867,6 +2035,7 @@ details[open] summary {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 24%;
     transition: transform 0.3s ease;
 }
 
@@ -2033,6 +2202,45 @@ details[open] summary {
     color: var(--text-muted);
 }
 
+.history-media-grid {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.25rem;
+}
+
+.history-media-card {
+    margin: 0;
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.history-media-card img,
+.history-media-card svg {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.history-media-card figcaption {
+    padding: 0.8rem 0.9rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.history-diagram-card {
+    padding: 0.6rem;
+}
+
+.history-diagram-card figcaption {
+    padding-top: 0.25rem;
+}
+
 /* Stats Section */
 .stats-section {
     margin: 4rem 0;
@@ -2099,6 +2307,18 @@ details[open] summary {
     }
 
     .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hackathon-case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benchmark-grid {
         grid-template-columns: 1fr;
     }
 

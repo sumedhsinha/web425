@@ -39,195 +39,199 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="about-hero">
-            <h1>About HaxScore</h1>
-            <p class="lead-text">Exploring hackathons and gear since 2023. A passionate team dedicated to providing authentic, detailed reviews and insights into the world of competitive programming events and cutting-edge technology.</p>
+            <h1>Why Review Hackathons?</h1>
+            <p class="lead-text">HaxScore started as a survival notebook after one overwhelming first event. It grew into a shared field guide for first-timers, returners, and teams trying to improve with each sprint.</p>
         </section>
 
-        <!-- Mission & Vision -->
-        <section class="mission-section">
-            <div class="mission-grid">
-                <article class="mission-card">
-                    <h3><i class="fa-solid fa-bullseye"></i> Our Mission</h3>
-                    <p>To create a comprehensive resource for evaluating hackathons and gear through rigorous testing, honest feedback, and community collaboration. We believe in transparency and detailed analysis.</p>
+        <section class="about-why" aria-labelledby="about-why-title">
+            <h2 id="about-why-title">The Journey Behind HaxScore</h2>
+            <div class="about-why-grid">
+                <article class="why-card">
+                    <h3><i class="fa-solid fa-person-running"></i> Problem We Kept Seeing</h3>
+                    <p>Most guides explain what hackathons are, but not what they feel like hour by hour. New attendees often walk in unprepared for team formation pressure, sleep logistics, and judging-day chaos.</p>
                 </article>
-                <article class="mission-card">
-                    <h3><i class="fa-solid fa-sparkles"></i> Our Vision</h3>
-                    <p>Build a trusted platform where participants can make informed decisions about which hackathons to attend and what equipment will best serve their needs in competitive environments.</p>
+                <article class="why-card">
+                    <h3><i class="fa-solid fa-compass-drafting"></i> What We Built Instead</h3>
+                    <p>We document events as lived experiences: venue flow, mentoring quality, food reliability, hardware access, and what actually helps teams ship before deadline.</p>
                 </article>
-                <article class="mission-card">
-                    <h3><i class="fa-solid fa-handshake"></i> Our Values</h3>
-                    <p>Integrity in every review, inclusivity in our community, and a commitment to helping others succeed. We stand by our ratings and methodology.</p>
+                <article class="why-card">
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Why It Matters</h3>
+                    <p>Hackathons are social, educational, and fun. Good prep means less panic, better teamwork, and stronger projects. HaxScore exists to shorten that learning curve.</p>
                 </article>
             </div>
         </section>
 
-        <!-- Team Section -->
-        <section class="team-section">
-            <h2>Meet the Team</h2>
-            <p>The talented people behind HaxScore, working to bring you the best reviews and insights.</p>
-            
+        <section class="hackathon-case" aria-labelledby="hackathon-case-title">
+            <h2 id="hackathon-case-title">What Hackathons Add That Classes Miss</h2>
+            <p class="section-intro">University gave us strong foundations, but not always the full software engineering arc. In class, projects are often scoped and protected. At hackathons, the work is messy: unclear requirements, team mismatch, live demos, sleep debt, and delivery pressure all at once.</p>
+
+            <div class="hackathon-case-grid">
+                <article class="case-card">
+                    <h3><i class="fa-solid fa-building-columns"></i> University Learning Gap</h3>
+                    <p>Coursework teaches algorithms, architecture, and core concepts. It usually cannot simulate rapid product decisions, stakeholder constraints, and collaboration with strangers under hard deadlines.</p>
+                </article>
+                <article class="case-card">
+                    <h3><i class="fa-solid fa-flask"></i> Experimentation and Learning</h3>
+                    <p>Hackathons reward experimentation: trying a new stack, scrapping failed ideas early, and learning through quick iteration. This mirrors early-career SWE work more closely than isolated assignments.</p>
+                </article>
+                <article class="case-card">
+                    <h3><i class="fa-solid fa-briefcase"></i> On-the-Job Transfer</h3>
+                    <p>The same habits transfer to work: defining scope, negotiating tradeoffs, shipping under time pressure, and presenting unfinished but useful progress to peers and mentors.</p>
+                </article>
+            </div>
+
+            <h3 class="subsection-title">Travel and Hackathons: Why It Matters</h3>
+            <p>Travel is not a side note. Every event includes a full lifecycle: prep, travel anticipation, arrival stress, build sprint, demo pressure, and the return phase where teams reflect on what worked.</p>
+            <ol class="hackathon-stages">
+                <li><strong>Prep:</strong> Team formation, project scoping, packing chargers/adapters, and checking venue rules.</li>
+                <li><strong>Travel + Anticipation:</strong> Transit delays, schedule uncertainty, and pre-event coordination.</li>
+                <li><strong>Execution:</strong> Building, debugging, sleep management, and role handoffs.</li>
+                <li><strong>Demo + Judging:</strong> Storytelling quality can matter as much as technical depth.</li>
+                <li><strong>Return + Debrief:</strong> Teams convert failure points into repeatable checklists.</li>
+            </ol>
+
+            <h3 class="subsection-title">Challenges, Purpose, and What Gets Overlooked</h3>
+            <div class="challenge-list-wrap">
+                <ul class="challenge-list">
+                    <li>Purpose: learn faster through real constraints and collective problem solving.</li>
+                    <li>Easily overlooked: sleep plan, backup internet, extension cords, and submission cutoff timing.</li>
+                    <li>Things left behind: credentials, adapters, hygiene items, and contingency plans.</li>
+                    <li>Common problems: scope creep, broken environments, unclear ownership, and last-minute merge conflicts.</li>
+                    <li>Complications that can go from bad to good: failed prototypes that force simpler and stronger final demos.</li>
+                </ul>
+            </div>
+
+            <h3 class="subsection-title">Benchmarking Three Online Perspectives</h3>
+            <p class="benchmark-intro">To keep this page grounded, we benchmark our own experience against one positive, one neutral, and one critical source:</p>
+            <div class="benchmark-grid">
+                <article class="benchmark-card benchmark-positive">
+                    <h4>Positive Perspective</h4>
+                    <p><a href="https://www.coursera.org/articles/what-is-a-hackathon" target="_blank" rel="noopener noreferrer">Coursera's overview</a> emphasizes skill growth, networking, creativity, and career opportunities. This aligns with our view that hackathons accelerate practical SWE growth beyond classroom boundaries.</p>
+                </article>
+                <article class="benchmark-card benchmark-neutral">
+                    <h4>Neutral Perspective</h4>
+                    <p><a href="https://en.wikipedia.org/wiki/Hackathon" target="_blank" rel="noopener noreferrer">Wikipedia's hackathon entry</a> describes structure, timeline, participant roles, and event types. We use this operational framing for our prep-travel-build-demo-debrief model.</p>
+                </article>
+                <article class="benchmark-card benchmark-negative">
+                    <h4>Critical Perspective</h4>
+                    <p><a href="https://www.thoughtworks.com/en-us/insights/blog/why-hackathons-suck" target="_blank" rel="noopener noreferrer">Thoughtworks' critique</a> argues short events can produce shallow outcomes without long-term ownership. We agree, so HaxScore focuses on post-event reflection and continuity rather than weekend hype alone.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="team-section" aria-labelledby="contributors-title">
+            <h2 id="contributors-title">Contributor Profiles</h2>
+            <p class="section-intro">The site editor plus four recurring collaborators who help produce reviews, visuals, and field reports.</p>
+
             <div class="team-grid">
-                <!-- Team Member 1 -->
                 <article class="team-card">
                     <div class="team-image-wrapper">
-                        <img src="../images/profile/Sumedh.jpeg" alt="Sumedh Sinha - Founder & Lead Reviewer" class="team-image">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
+                        <img src="../images/profile/Sumedh.jpeg" alt="Portrait of Sumedh Sinha" class="team-image">
                     </div>
                     <div class="team-info">
                         <h3>Sumedh</h3>
-                        <p class="team-role">Founder & Lead Reviewer</p>
-                        <p class="team-bio">Computer Science student at Rutgers University with a passion for hackathons and tech. Sumedh has attended 8+ hackathons and tested dozens of gear setups. He leads the review methodology and standards.</p>
+                        <p class="team-role">Site Editor and Lead Reviewer</p>
+                        <p class="team-bio">Sumedh sets editorial direction, writes primary long-form reviews, and maintains the scoring framework used across event and gear pages. He coordinates contributor assignments and makes final publishing calls for each release cycle.</p>
                         <div class="team-tags">
-                            <span class="tag">Hackathon Enthusiast</span>
-                            <span class="tag">Tech Reviewer</span>
+                            <span class="tag">Editorial Lead</span>
+                            <span class="tag">Review Framework</span>
                         </div>
                     </div>
                 </article>
 
-                <!-- Team Member 2 -->
                 <article class="team-card">
                     <div class="team-image-wrapper">
-                        <img src="../images/profile/Alex.jpeg" alt="Alex - Gear Specialist" class="team-image">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
+                        <img src="../images/profile/Alex.jpeg" alt="Portrait of Alex" class="team-image">
                     </div>
                     <div class="team-info">
                         <h3>Alex</h3>
-                        <p class="team-role">Gear Specialist</p>
-                        <p class="team-bio">Former software engineer turned hardware enthusiast. Alex brings deep technical expertise in evaluating audio equipment, laptops, and productivity tools. They've tested over 50 different products for HaxScore.</p>
+                        <p class="team-role">Logistics Reporter and Venue Notes Lead</p>
+                        <p class="team-bio">Alex specializes in operational reporting: check-in flow, workspace comfort, power access, overnight conditions, and schedule clarity. Their field notes help readers choose events that match their working style.</p>
                         <div class="team-tags">
-                            <span class="tag">Hardware Expert</span>
-                            <span class="tag">Audio Enthusiast</span>
+                            <span class="tag">Venue Ops</span>
+                            <span class="tag">Field Notes</span>
                         </div>
                     </div>
                 </article>
 
-                <!-- Team Member 3 -->
                 <article class="team-card">
                     <div class="team-image-wrapper">
-                        <img src="../images/profile/Maya.jpeg" alt="Maya - Community Manager" class="team-image">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
+                        <img src="../images/profile/Maya.jpeg" alt="Portrait of Maya" class="team-image">
                     </div>
                     <div class="team-info">
                         <h3>Maya</h3>
-                        <p class="team-role">Community Manager & Event Scout</p>
-                        <p class="team-bio">Marketing and Communications specialist who keeps HaxScore connected with the community. Maya travels to hackathons, conducts interviews, and gathers real-world feedback from participants to inform our reviews.</p>
+                        <p class="team-role">Community Correspondent and Interview Producer</p>
+                        <p class="team-bio">Maya gathers participant voices through post-event interviews and mini diary logs. She contributes the social dimension of HaxScore, especially first-timer experiences and mentorship stories.</p>
                         <div class="team-tags">
-                            <span class="tag">Community Builder</span>
-                            <span class="tag">Event Scout</span>
+                            <span class="tag">Interviews</span>
+                            <span class="tag">Community Stories</span>
                         </div>
                     </div>
                 </article>
 
-                <!-- Team Member 4 -->
                 <article class="team-card">
                     <div class="team-image-wrapper">
-                        <img src="../images/profile/Jordan.jpeg" alt="Jordan - Data Analyst" class="team-image">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
+                        <img src="../images/profile/Jordan.jpeg" alt="Portrait of Jordan" class="team-image">
                     </div>
                     <div class="team-info">
                         <h3>Jordan</h3>
-                        <p class="team-role">Data Analyst & Visualization Lead</p>
-                        <p class="team-bio">Data scientist who transforms our review data into clear, actionable insights. Jordan develops the scoring algorithms and creates the interactive maps and comparisons that help visitors make better decisions.</p>
+                        <p class="team-role">Data and Visualization Collaborator</p>
+                        <p class="team-bio">Jordan translates raw review notes into comparison-friendly formats, timeline summaries, and map-ready metadata. They maintain consistency between narrative observations and visual outputs across pages.</p>
                         <div class="team-tags">
-                            <span class="tag">Data Science</span>
-                            <span class="tag">Visualization</span>
+                            <span class="tag">Visual Systems</span>
+                            <span class="tag">Data Cleanup</span>
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Timeline Section -->
-        <section class="timeline-section">
-            <h2>Our Journey</h2>
+        <section class="timeline-section" aria-labelledby="history-title">
+            <h2 id="history-title">Project History</h2>
+            <p class="section-intro">How the project evolved from personal notes into a collaborative hackathon publication.</p>
+
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker">
-                        <i class="fa-solid fa-rocket"></i>
+                        <i class="fa-solid fa-notes-medical"></i>
                     </div>
                     <div class="timeline-content">
-                        <h3>2023</h3>
-                        <p><strong>Founded</strong> - HaxScore launches with reviews of 3 hackathons and initial gear evaluations.</p>
+                        <h3>2023 | Notebook Era</h3>
+                        <p>Initial reviews began as private logs after two Rutgers-area events. Early notes tracked practical details: outlet availability, sleep zones, mentor response time, and judging clarity.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker">
-                        <i class="fa-solid fa-chart-line"></i>
+                        <i class="fa-solid fa-map-location-dot"></i>
                     </div>
                     <div class="timeline-content">
-                        <h3>2024</h3>
-                        <p><strong>Expansion</strong> - Growing to 15+ hackathon reviews and establishing our comprehensive rating methodology.</p>
+                        <h3>2024 | Structured Reporting</h3>
+                        <p>The team introduced a shared template and scoring rubric. Reviews shifted from recap-style writing to repeatable field reporting designed for first-time attendees.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker">
-                        <i class="fa-solid fa-users"></i>
+                        <i class="fa-solid fa-camera"></i>
                     </div>
                     <div class="timeline-content">
-                        <h3>2025</h3>
-                        <p><strong>Community Growth</strong> - Reaching thousands of visitors and forming partnerships with hackathon organizers.</p>
+                        <h3>2025 | Visual Documentation</h3>
+                        <p>Photo logs, sketch notes, and process diagrams were added to contextualize event narratives. This phase emphasized showing workflow, not just describing it.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-marker">
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-network-wired"></i>
                     </div>
                     <div class="timeline-content">
-                        <h3>2026</h3>
-                        <p><strong>Current</strong> - Continuously evolving with interactive maps, detailed comparisons, and deeper community engagement.</p>
+                        <h3>2026 | Current Build</h3>
+                        <p>HaxScore now combines reviews, inventory, interactive maps, and a visual essay workflow. Ongoing work focuses on clearer contributor stories and broader event coverage.</p>
                     </div>
                 </div>
             </div>
+
         </section>
 
-        <!-- Stats Section -->
-        <section class="stats-section">
-            <h2>By the Numbers</h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Hackathons Reviewed</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">3+</div>
-                    <div class="stat-label">Gear Products Tested</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">1k+</div>
-                    <div class="stat-label">Annual Visitors</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Honest Reviews</div>
-                </div>
-            </div>
-        </section>
 
         <p>Unless otherwise noted, all content on HaxScore is created by our team. All pictures on the website are taken by us, or used with permission and credited.</p>
     </main>
