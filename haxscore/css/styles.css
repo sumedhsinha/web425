@@ -1,4 +1,23 @@
 /* ==========================================================================
+    Stylesheet Map - created by Sumedh Sinha (sumedh.sinha@rutgers.edu)
+    1. Theme Variables
+    2. Reset & Base Typography
+    3. Global Layout & Link Treatments
+    4. Header & Navigation
+    5. Shared Components (Cards, Map, Gallery)
+    6. Review Page Components
+    7. Footer
+    8. Map Timeline & Event Navigation
+    9. Global Responsive Rules (Core Layout)
+    10. Methodology Pages
+    11. Global Animations & Accessibility Effects
+    12. Home Hero + Lead Section
+    13. Image Modal Viewer
+    14. About Page
+    15. Visual Essay
+    ========================================================================== */
+
+/* ==========================================================================
    1. CSS Variables (Light & Dark Themes)
    ========================================================================== */
 :root {
@@ -265,8 +284,9 @@ body.dark-mode .dark-logo { display: block; }
 }
 
 /* ==========================================================================
-   5. Cards, Map, Gallery
-   ========================================================================== */
+    5. Shared Components: Cards, Map, Gallery
+    ========================================================================== */
+/* Map canvas */
 #map {
     height: 760px;
     width: 100%;
@@ -365,6 +385,7 @@ body.dark-mode .dark-logo { display: block; }
     transform: scale(1.05);
 }
 
+/* Home cards image framing */
 /* Home page stock thumbnails: fill the frame edge-to-edge. */
 .home-cards .card {
     padding-top: 0;
@@ -398,6 +419,7 @@ body.dark-mode .dark-logo { display: block; }
 }
 .short-card p { font-size: 0.85rem; margin-bottom: 0.5rem; }
 
+/* Map popup media + fun rating */
 .map-popup-image-frame {
     width: 100%;
     height: 96px;
@@ -455,6 +477,7 @@ body.dark-mode .dark-logo { display: block; }
     color: var(--accent-color);
 }
 
+/* Gallery and inventory grids */
 .album-category { margin-bottom: 3rem; }
 
 .gallery-grid {
@@ -1030,8 +1053,8 @@ footer p a:hover {
 }
 
 /* ==========================================================================
-   8. Media Queries (Responsive Adjustments)
-   ========================================================================== */
+    9. Global Responsive Rules (Core Layout)
+    ========================================================================== */
 @media (max-width: 900px) {
     .review-grid {
         grid-template-columns: 1fr;
@@ -1079,8 +1102,8 @@ footer p a:hover {
 
 
 /* ==========================================================================
-   9. Methodology Pages (Single Column Layout)
-   ========================================================================== */
+    10. Methodology Pages (Single Column Layout)
+    ========================================================================== */
 .methodology-container {
     max-width: 1200px;
     margin: 0 auto; 
@@ -1172,8 +1195,8 @@ footer p a:hover {
 }
 
 /* ==========================================================================
-   10. Animations & Effects
-   ========================================================================== */
+    11. Global Animations & Effects
+    ========================================================================== */
 
 /* Smooth transitions for theme switching */
 :root,
@@ -1229,8 +1252,9 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
-   11. Hero Image
-   ========================================================================== */
+    12. Home Section
+    ========================================================================== */
+/* Generic hero image block */
 .hero-figure {
     margin: 2rem auto;
     max-width: 900px;
@@ -1263,6 +1287,7 @@ h1, h2, h3, h4 {
     font-style: italic;
 }
 
+/* Homepage lead composition */
 .home-lead {
     margin: 1rem auto 2.5rem;
 }
@@ -1515,8 +1540,8 @@ details[open] summary {
 }
 
 /* ==========================================================================
-   11. Image Modal Viewer
-   ========================================================================== */
+    13. Image Modal Viewer
+    ========================================================================== */
 
 /* Modal styles */
 .image-modal {
@@ -1719,8 +1744,8 @@ details[open] summary {
 }
 
 /* ==========================================================================
-   12. About/Team Page Styles
-   ========================================================================== */
+    14. About Page Styles
+    ========================================================================== */
 
 .about-hero {
     text-align: center;
@@ -1927,7 +1952,7 @@ details[open] summary {
     border-color: #ef4444;
 }
 
-/* Mission Section */
+/* Legacy mission blocks (kept for compatibility) */
 .mission-section {
     margin: 3rem 0;
 }
@@ -1987,7 +2012,7 @@ details[open] summary {
     font-size: 1.75rem;
 }
 
-/* Team Section */
+/* Contributor profile cards */
 .team-section {
     margin: 4rem 0;
 }
@@ -2126,7 +2151,7 @@ details[open] summary {
     font-weight: 500;
 }
 
-/* Timeline Section */
+/* About timeline + history media */
 .timeline-section {
     margin: 4rem 0;
 }
@@ -2241,7 +2266,7 @@ details[open] summary {
     padding-top: 0.25rem;
 }
 
-/* Stats Section */
+/* Legacy stats block (kept for compatibility) */
 .stats-section {
     margin: 4rem 0;
     padding: 3rem;
@@ -2282,7 +2307,7 @@ details[open] summary {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* Responsive Timeline */
+/* About page responsive rules */
 @media (max-width: 768px) {
     .timeline::before {
         left: 30px;
@@ -2332,8 +2357,8 @@ details[open] summary {
 }
 
 /* ==========================================================================
-   13. Visual Essay Layout?
-   ========================================================================== */
+    15. Visual Essay Layout
+    ========================================================================== */
 .essay-container {
     max-width: 920px;
     margin: 0 auto;
