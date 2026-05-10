@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 lng: -72.92229596365036,
                 org: "Yale University",
                 location: "OC Marsh Hall, New Haven, CT",
-                summary: "Secured a DOUBLE WIN, 2 awards totalling more than $2,000!! A very fruitful experience! <cite>Reviewed Apr 2026</cite>",
+                summary: "A strong campus-building event with practical mentorship, solid sponsor support, and a collaborative atmosphere. <cite>Reviewed Apr 2026</cite>",
                 link: "../reviews/yhack-2026.html",
                 image: "../images/yhack-2026/IMG_2090.jpeg",
                 funRating: 5
