@@ -1259,6 +1259,73 @@ h1, h2, h3, h4 {
     font-style: italic;
 }
 
+.home-lead {
+    margin: 1rem auto 2.5rem;
+}
+
+.home-lead-visual {
+    position: relative;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.home-lead-image {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+    display: block;
+}
+
+.home-lead-statement {
+    position: absolute;
+    left: 1.25rem;
+    bottom: 1.25rem;
+    max-width: 70%;
+    padding: 1rem 1.1rem;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.88), rgba(15, 20, 25, 0.68));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.home-lead-statement h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4.2vw, 3.2rem);
+    line-height: 1.05;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    background: none;
+    animation: none;
+}
+
+.home-lead-sub {
+    margin: 0.45rem 0 0;
+    font-size: clamp(1rem, 1.8vw, 1.28rem);
+    color: #f3f4f6;
+    font-weight: 500;
+}
+
+.home-lead-credit {
+    max-width: 1050px;
+    margin: 0.55rem auto 0;
+    text-align: right;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+.home-lead-intro {
+    max-width: 980px;
+    margin: 1.3rem auto 0;
+}
+
+.home-lead-intro p {
+    font-size: 1.14rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
 h1 {
     background-size: 200% 100%;
     animation: shimmer 8s ease-in-out infinite;
@@ -1277,6 +1344,40 @@ h1 {
 .review-main h3 {
     background-size: 200% 200%;
     animation: gradient-shift 4s ease infinite;
+}
+
+@media (max-width: 900px) {
+    .home-lead-image {
+        height: 360px;
+    }
+
+    .home-lead-statement {
+        max-width: 82%;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-lead-image {
+        height: 280px;
+    }
+
+    .home-lead-statement {
+        left: 0.75rem;
+        right: 0.75rem;
+        bottom: 0.75rem;
+        max-width: unset;
+        padding: 0.85rem 0.9rem;
+    }
+
+    .home-lead-credit {
+        text-align: left;
+        margin-left: 0.2rem;
+    }
+
+    .home-lead-intro p {
+        font-size: 1.02rem;
+        line-height: 1.7;
+    }
 }
 
 /* Smooth page load animation */
